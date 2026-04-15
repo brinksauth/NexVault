@@ -22,8 +22,6 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--t);min-height:100vh;overflow-x:hidden}
 input,select,textarea,button{font-family:'Sora',sans-serif}
 a{color:inherit;text-decoration:none}
-
-/* BG ORBS */
 #orb-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:0.07}
 .orb1{width:600px;height:600px;background:var(--p);top:-200px;left:-150px;animation:orbDrift 18s ease-in-out infinite alternate}
@@ -33,8 +31,6 @@ a{color:inherit;text-decoration:none}
 .grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.025;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-size:200px}
-
-/* VIEW SYSTEM — explicit display per view type */
 .view{display:none}
 #v-landing{display:none}
 #v-login{display:none;align-items:center;justify-content:center}
@@ -44,8 +40,6 @@ a{color:inherit;text-decoration:none}
 #v-login.on{display:flex}
 #v-register.on{display:flex}
 #v-app.on{display:block}
-
-/* ═══ AUTH PAGES ═══ */
 #v-login,#v-register{position:relative;z-index:1;min-height:100vh;padding:24px}
 .auth-card{width:100%;max-width:420px;background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:40px 36px;box-shadow:0 24px 80px rgba(0,0,0,0.6);position:relative;overflow:hidden}
 .auth-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--p2),transparent)}
@@ -74,12 +68,8 @@ a{color:inherit;text-decoration:none}
 .auth-switch{text-align:center;margin-top:22px;font-size:13px;color:var(--tm)}
 .auth-switch a{color:var(--p2);font-weight:600;cursor:pointer}
 .auth-switch a:hover{text-decoration:underline}
-
-/* ═══ APP LAYOUT ═══ */
 #v-app{width:100%;min-height:100vh;position:relative;z-index:1;display:none}
 .app-shell{display:flex;min-height:100vh}
-
-/* SIDEBAR */
 .sidebar{width:var(--sw);flex-shrink:0;background:var(--bg2);border-right:1px solid var(--bdr);display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100;transition:transform .3s ease}
 .sb-head{padding:22px 20px 18px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:12px}
 .sb-logo-mark{width:38px;height:38px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--p3),var(--p2));display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff;font-weight:800;box-shadow:0 3px 14px var(--pg)}
@@ -102,8 +92,6 @@ a{color:inherit;text-decoration:none}
 .sb-user-role{font-size:11px;color:var(--tm)}
 .sb-signout{background:none;border:none;color:var(--tm);cursor:pointer;font-size:14px;padding:4px;transition:color .2s;flex-shrink:0}
 .sb-signout:hover{color:var(--r)}
-
-/* MAIN */
 .main-content{margin-left:var(--sw);flex:1;min-height:100vh;display:flex;flex-direction:column}
 .topbar{height:var(--hh);background:rgba(10,10,24,0.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:50}
 .topbar-left{display:flex;align-items:center;gap:14px}
@@ -115,13 +103,9 @@ a{color:inherit;text-decoration:none}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(0.85)}}
 .notif-btn{width:36px;height:36px;border-radius:var(--rad3);background:var(--s);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--tm);font-size:15px;transition:all .2s}
 .notif-btn:hover{background:var(--sh);color:var(--t);border-color:var(--bdp)}
-
-/* PAGE SECTIONS */
 .page-section{display:none}
 .page-section.on{display:block}
 .inner{padding:28px}
-
-/* ═══ STATS ═══ */
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
 .stat-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:22px 20px;position:relative;overflow:hidden;transition:border-color .2s}
 .stat-card:hover{border-color:var(--bdp)}
@@ -138,8 +122,6 @@ a{color:inherit;text-decoration:none}
 .stat-lbl{font-size:12.5px;color:var(--tm);font-weight:500}
 .section-title{font-size:16px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .section-title::after{content:'';flex:1;height:1px;background:var(--bdr)}
-
-/* PORTFOLIO */
 .portfolio-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:24px}
 .portfolio-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:22px;transition:border-color .2s}
 .portfolio-card:hover{border-color:var(--bdp)}
@@ -160,15 +142,12 @@ a{color:inherit;text-decoration:none}
 .alloc-fill.eth{background:linear-gradient(90deg,#627EEA,#A3B4F5)}
 .alloc-fill.usdt{background:linear-gradient(90deg,#26A17B,#5ECBA5)}
 .alloc-pct{font-size:13px;font-weight:700;color:var(--t);min-width:42px;text-align:right;font-family:'JetBrains Mono',monospace}
-
 .btc-card{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(247,147,26,0.08));border:1px solid var(--bdp);border-radius:var(--rad);padding:22px;text-align:center;display:flex;flex-direction:column;justify-content:center}
 .btc-logo{display:flex;justify-content:center;margin-bottom:10px}
 .btc-logo svg{width:52px;height:52px}
 .btc-name{font-size:14px;font-weight:600;color:var(--tm);margin-bottom:4px}
 .btc-prc{font-size:20px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;margin-bottom:8px}
 .btc-chg{font-size:12px;font-weight:600;padding:4px 12px;border-radius:100px;display:inline-block;background:rgba(16,185,129,0.12);color:#10B981;border:1px solid rgba(16,185,129,0.2)}
-
-/* TRANSACTIONS */
 .tx-table-wrap{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);overflow:hidden;overflow-x:auto}
 .tx-table{width:100%;border-collapse:collapse;min-width:380px}
 .tx-table th{padding:13px 18px;text-align:left;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--tm);border-bottom:1px solid var(--bdr);background:var(--bg4)}
@@ -183,8 +162,6 @@ a{color:inherit;text-decoration:none}
 .tx-status{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;padding:3px 10px;border-radius:100px}
 .tx-status.completed{background:rgba(16,185,129,0.1);color:#10B981;border:1px solid rgba(16,185,129,0.2)}
 .tx-note{font-size:11px;color:var(--tf);margin-top:12px;display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--s);border-radius:var(--rad3);border:1px solid var(--bdr)}
-
-/* WITHDRAWAL */
 .wd-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .form-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:24px}
 .wd-form-group{margin-bottom:18px}
@@ -205,8 +182,6 @@ a{color:inherit;text-decoration:none}
 .wd-info-lbl{color:var(--tm)}
 .wd-info-val{font-weight:600;font-family:'JetBrains Mono',monospace}
 .wd-info-val.avail{color:#10B981}
-
-/* PROFILE */
 .profile-layout{display:grid;grid-template-columns:1fr 2fr;gap:20px}
 .profile-avatar-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:28px;text-align:center}
 .profile-avatar-big{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,var(--p3),var(--p2));display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:800;color:#fff;box-shadow:0 6px 24px var(--pg)}
@@ -219,8 +194,6 @@ a{color:inherit;text-decoration:none}
 .profile-info-lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--tm)}
 .profile-info-val{font-size:14px;font-weight:500;text-align:right}
 .profile-info-val.mono{font-family:'JetBrains Mono',monospace;font-size:13px}
-
-/* ═══ MODALS ═══ */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.78);z-index:200;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(5px)}
 .modal-overlay.on{display:flex}
 .modal{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:32px;max-width:460px;width:100%;animation:modalIn .25s ease;position:relative;max-height:90vh;overflow-y:auto}
@@ -237,16 +210,10 @@ a{color:inherit;text-decoration:none}
 .btn-modal-pri:hover{filter:brightness(1.1)}
 .btn-modal-sec{flex:1;padding:12px;border-radius:var(--rad3);font-size:14px;font-weight:600;cursor:pointer;background:var(--s);border:1px solid var(--bdr);color:var(--tm);transition:all .2s}
 .btn-modal-sec:hover{background:var(--sh);color:var(--t)}
-
-/* SPINNER */
 .spinner{width:44px;height:44px;border:3px solid var(--bdr);border-top-color:var(--p2);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 18px}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* WA BUTTON */
 .btn-wa{display:inline-flex;align-items:center;gap:10px;padding:13px 24px;border-radius:var(--rad3);font-size:15px;font-weight:700;cursor:pointer;border:none;background:#25D366;color:#fff;box-shadow:0 6px 24px rgba(37,211,102,0.3);transition:all .25s;width:100%;justify-content:center;margin-top:6px}
 .btn-wa:hover{filter:brightness(1.08);transform:translateY(-1px)}
-
-/* ═══ ID VERIFICATION STYLES ═══ */
 .uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
 .uc-card{background:var(--bg2);border:2px dashed var(--bdr);border-radius:var(--rad3);padding:20px 14px;text-align:center;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
 .uc-card:hover{border-color:var(--p);background:var(--pf)}
@@ -260,8 +227,6 @@ a{color:inherit;text-decoration:none}
 .uc-done-mark{position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:50%;background:var(--g);display:none;align-items:center;justify-content:center;font-size:10px;color:#fff}
 .uc-card.done .uc-done-mark{display:flex}
 .uc-single{grid-column:1/-1}
-
-/* ═══ FACE SCAN ═══ */
 .face-scan-box{background:var(--bg2);border:1px solid var(--bdr);border-radius:var(--rad);padding:28px;text-align:center;margin-bottom:20px}
 .face-oval{width:130px;height:160px;border-radius:50%;border:3px solid var(--bdp);margin:0 auto 16px;position:relative;display:flex;align-items:center;justify-content:center;background:rgba(124,58,237,0.05)}
 .face-oval.scanning{border-color:var(--p2);animation:facePulse 1.5s ease-in-out infinite}
@@ -272,27 +237,9 @@ a{color:inherit;text-decoration:none}
 @keyframes scanLine{0%{top:0;opacity:0}10%{opacity:1}90%{opacity:1}100%{top:100%;opacity:0}}
 .face-instruction{font-size:14px;color:var(--tm);line-height:1.6;margin-bottom:8px}
 .face-status{font-size:12px;font-weight:600;color:var(--p2);min-height:20px}
-
-/* PROGRESS BAR */
-.wf-prog-bar{height:3px;background:var(--bdr);border-radius:2px;overflow:hidden;margin-bottom:24px;display:none}
-.wf-prog-fill{height:100%;background:linear-gradient(90deg,var(--p3),var(--p2));transition:width .5s ease;border-radius:2px}
-.wf-steps-row{display:flex;gap:8px;margin-bottom:20px;display:none}
-.wf-step-dot{flex:1;height:3px;border-radius:2px;background:var(--bdr);transition:background .3s}
-.wf-step-dot.done{background:var(--g)}
-.wf-step-dot.active{background:var(--p2)}
-
-/* TOAST */
-#toast{position:fixed;bottom:24px;right:24px;z-index:9999;padding:13px 20px;border-radius:var(--rad3);font-size:14px;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,0.4);display:none;align-items:center;gap:10px;animation:toastIn .3s ease}
-@keyframes toastIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-
-/* SIDEBAR OVERLAY (mobile) */
 .sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:99}
 .sb-overlay.on{display:block}
-
-/* LANDING */
 #v-landing{position:relative;z-index:1;min-height:100vh;overflow-x:hidden}
-
-/* NAV */
 .land-nav{display:flex;align-items:center;justify-content:space-between;padding:22px 60px;position:sticky;top:0;z-index:10;background:rgba(6,6,18,0.7);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.05)}
 .land-logo{display:flex;align-items:center;gap:12px;cursor:pointer}
 .land-logo-mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--p3),var(--p2));display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;font-weight:800;box-shadow:0 4px 18px var(--pg)}
@@ -304,8 +251,6 @@ a{color:inherit;text-decoration:none}
 .btn-ghost:hover{background:var(--s);color:var(--t);border-color:var(--bdp)}
 .btn-pri-sm{background:linear-gradient(135deg,var(--p3),var(--p2));color:#fff;border:none;box-shadow:0 4px 16px var(--pg)}
 .btn-pri-sm:hover{filter:brightness(1.1);transform:translateY(-1px)}
-
-/* HERO */
 .land-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 70px;position:relative;z-index:1}
 .land-badge{display:inline-flex;align-items:center;gap:7px;background:var(--pf);border:1px solid var(--bdp);color:var(--p2);font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:32px;animation:fadeUp .6s ease both}
 .land-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--p2);animation:pulse 1.6s infinite}
@@ -318,15 +263,11 @@ a{color:inherit;text-decoration:none}
 .btn-big-pri:hover{transform:translateY(-3px);box-shadow:0 16px 48px var(--pg);filter:brightness(1.08)}
 .btn-big-sec{padding:16px 36px;border-radius:var(--rad2);font-size:16px;font-weight:700;cursor:pointer;background:var(--s);border:1px solid var(--bdr);color:var(--t);transition:all .28s;font-family:'Sora',sans-serif}
 .btn-big-sec:hover{background:var(--sh);border-color:var(--bdp);transform:translateY(-2px)}
-
-/* HERO STATS ROW */
 .land-stats{display:flex;gap:40px;justify-content:center;margin-top:54px;animation:fadeUp .6s .35s ease both;flex-wrap:wrap}
 .land-stat{text-align:center}
 .land-stat-val{font-size:26px;font-weight:800;letter-spacing:-1px;font-family:'JetBrains Mono',monospace;background:linear-gradient(135deg,#fff,var(--p2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .land-stat-lbl{font-size:11.5px;color:var(--tm);font-weight:600;letter-spacing:0.5px;text-transform:uppercase;margin-top:3px}
 .land-stat-divider{width:1px;background:var(--bdr);align-self:stretch}
-
-/* ═══ TRUST CAROUSEL ═══ */
 .trust-strip{padding:28px 0;overflow:hidden;position:relative;z-index:1;animation:fadeUp .6s .4s ease both}
 .trust-label{text-align:center;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tf);margin-bottom:18px}
 .trust-track-wrap{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
@@ -337,8 +278,6 @@ a{color:inherit;text-decoration:none}
 .trust-icon{width:48px;height:48px}
 .trust-name{font-size:11px;font-weight:700;color:var(--tm);letter-spacing:0.8px;text-transform:uppercase}
 @keyframes trustScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-
-/* FEATURES */
 .land-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:60px auto 0;padding:0 32px;animation:fadeUp .6s .45s ease both}
 .land-feat{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--rad);padding:28px;transition:all .3s;position:relative;overflow:hidden}
 .land-feat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p3),var(--p2));transform:scaleX(0);transform-origin:left;transition:transform .3s}
@@ -347,12 +286,8 @@ a{color:inherit;text-decoration:none}
 .land-feat-ico{width:46px;height:46px;border-radius:13px;background:var(--pf);border:1px solid var(--bdp);display:flex;align-items:center;justify-content:center;font-size:19px;color:var(--p2);margin-bottom:16px}
 .land-feat h3{font-size:15px;font-weight:700;margin-bottom:8px;letter-spacing:-0.2px}
 .land-feat p{font-size:13px;color:var(--tm);line-height:1.65}
-
-/* FOOTER */
 .land-footer{text-align:center;padding:32px 24px;border-top:1px solid var(--bdr);font-size:12px;color:var(--tf);position:relative;z-index:1;margin-top:80px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-
-/* ═══ DASHBOARD TRUST CAROUSEL ═══ */
 .dash-trust-strip{margin-bottom:28px;overflow:hidden}
 .dash-trust-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--tf);margin-bottom:12px}
 .dash-trust-track-wrap{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -361,8 +296,6 @@ a{color:inherit;text-decoration:none}
 .dash-trust-item{display:flex;align-items:center;gap:8px;padding:0 28px;opacity:0.5;transition:opacity .25s;flex-shrink:0;cursor:default;border-right:1px solid var(--bdr)}
 .dash-trust-item:hover{opacity:0.9}
 .dash-trust-item span{font-size:11px;font-weight:700;color:var(--tm);letter-spacing:1px;font-family:'JetBrains Mono',monospace}
-
-/* LANDING RESPONSIVE */
 @media(max-width:768px){
   .land-nav{padding:14px 20px}
   .land-hero{padding:60px 20px 44px}
@@ -383,8 +316,6 @@ a{color:inherit;text-decoration:none}
   .land-nav-btns button{padding:8px 14px;font-size:12px}
   .land-h1{letter-spacing:-1px}
 }
-
-/* ═══ RESPONSIVE — APP ═══ */
 @media(max-width:1100px){
   .stat-grid{grid-template-columns:repeat(2,1fr)}
   .portfolio-grid{grid-template-columns:1fr}
@@ -392,38 +323,27 @@ a{color:inherit;text-decoration:none}
   .profile-layout{grid-template-columns:1fr}
 }
 @media(max-width:768px){
-  /* Sidebar */
   :root{--sw:260px}
   .sidebar{transform:translateX(-100%);z-index:200}
   .sidebar.open{transform:translateX(0);box-shadow:0 0 60px rgba(0,0,0,0.8)}
   .main-content{margin-left:0!important;width:100%}
   .menu-toggle{display:flex!important}
-  /* Topbar */
   .topbar{padding:0 16px}
   .topbar-badge{display:none}
-  /* Inner padding */
   .inner{padding:14px}
-  /* Stats */
   .stat-grid{grid-template-columns:1fr}
   .stat-val{font-size:22px}
-  /* Cards */
   .portfolio-grid{grid-template-columns:1fr}
   .wd-layout{grid-template-columns:1fr}
   .profile-layout{grid-template-columns:1fr}
-  /* Trust carousel */
   .dash-trust-item{padding:0 16px}
-  /* Modals */
   .modal{padding:22px 18px;max-width:100%;margin:0 12px}
   .modal-actions{flex-direction:column;gap:8px}
   .btn-wa{font-size:13.5px;padding:12px 18px}
-  /* Upload grid */
   .uc-grid{grid-template-columns:1fr}
   .uc-single{grid-column:auto}
-  /* Face modal */
   .face-scan-box{padding:20px 12px}
-  /* Auth cards */
   .auth-card{padding:28px 20px;margin:16px}
-  /* Transactions */
   .tx-table{min-width:320px}
   .tx-table th,.tx-table td{padding:10px 12px;font-size:12px}
 }
@@ -443,6 +363,31 @@ a{color:inherit;text-decoration:none}
   .land-nav-btns{gap:6px}
   .land-nav-btns button{padding:7px 12px;font-size:12px}
 }
+
+/* ═══ PROCESSING MODAL STYLES ═══ */
+.proc-ring-wrap{position:relative;width:130px;height:130px;margin:0 auto 24px}
+.proc-ring-bg{fill:none;stroke:rgba(255,255,255,0.07);stroke-width:8}
+.proc-ring-fill{fill:none;stroke:url(#procGrad);stroke-width:8;stroke-linecap:round;stroke-dasharray:339.3;stroke-dashoffset:339.3;transition:stroke-dashoffset 0.8s ease;transform:rotate(-90deg);transform-origin:65px 65px}
+.proc-pct-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;font-family:'JetBrains Mono',monospace;letter-spacing:-1px;color:var(--t)}
+.proc-status-wrap{height:54px;overflow:hidden;position:relative;margin-bottom:8px}
+.proc-status-inner{display:flex;flex-direction:column;align-items:center;gap:0}
+.proc-status-line{font-size:13px;font-weight:500;color:var(--tm);padding:8px 0;text-align:center;opacity:0;animation:statusFadeIn 0.5s ease forwards;line-height:1.5;height:54px;display:flex;align-items:center;justify-content:center}
+@keyframes statusFadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes statusFadeOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-14px)}}
+
+/* ═══ RESULT MODAL STYLES ═══ */
+.result-deny-icon{width:72px;height:72px;border-radius:20px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.result-deny-x{width:32px;height:32px;position:relative}
+.result-deny-x::before,.result-deny-x::after{content:'';position:absolute;top:50%;left:0;width:100%;height:3px;background:#EF4444;border-radius:2px}
+.result-deny-x::before{transform:translateY(-50%) rotate(45deg)}
+.result-deny-x::after{transform:translateY(-50%) rotate(-45deg)}
+.result-reasons{text-align:left;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.15);border-radius:var(--rad3);padding:16px 18px;margin-bottom:24px}
+.result-reason-item{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:13px;color:var(--tm);line-height:1.5}
+.result-reason-item+.result-reason-item{border-top:1px solid rgba(239,68,68,0.1)}
+.result-reason-dot{width:6px;height:6px;border-radius:50%;background:#EF4444;flex-shrink:0;margin-top:5px}
+.btn-pay-now{width:100%;padding:15px;border-radius:var(--rad3);font-size:16px;font-weight:800;cursor:pointer;border:none;background:linear-gradient(135deg,#b91c1c,#EF4444);color:#fff;box-shadow:0 6px 28px rgba(239,68,68,0.35);transition:all .25s;letter-spacing:0.2px}
+.btn-pay-now:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 12px 36px rgba(239,68,68,0.4)}
+.btn-pay-now:active{transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -453,7 +398,6 @@ a{color:inherit;text-decoration:none}
 
 <!-- ═══ LANDING ═══ -->
 <div id="v-landing" class="view on">
-  <!-- STICKY NAV -->
   <nav class="land-nav">
     <div class="land-logo">
       <div class="land-logo-mark">N</div>
@@ -464,8 +408,6 @@ a{color:inherit;text-decoration:none}
       <button class="btn-pri-sm" onclick="show('v-register')">Crear Cuenta</button>
     </div>
   </nav>
-
-  <!-- HERO -->
   <div class="land-hero">
     <div class="land-badge"><span class="land-badge-dot"></span>Plataforma Certificada · Colombia</div>
     <h1 class="land-h1">Invierte en <em>Bitcoin</em><br/>con total seguridad</h1>
@@ -474,160 +416,49 @@ a{color:inherit;text-decoration:none}
       <button class="btn-big-pri" onclick="show('v-register')"><i class="fas fa-rocket"></i>Empezar Ahora — Gratis</button>
       <button class="btn-big-sec" onclick="show('v-login')">Ya tengo cuenta</button>
     </div>
-
-    <!-- STATS ROW -->
     <div class="land-stats">
-      <div class="land-stat">
-        <div class="land-stat-val">$2.4B+</div>
-        <div class="land-stat-lbl">Volumen gestionado</div>
-      </div>
+      <div class="land-stat"><div class="land-stat-val">$2.4B+</div><div class="land-stat-lbl">Volumen gestionado</div></div>
       <div class="land-stat-divider"></div>
-      <div class="land-stat">
-        <div class="land-stat-val">48K+</div>
-        <div class="land-stat-lbl">Inversores activos</div>
-      </div>
+      <div class="land-stat"><div class="land-stat-val">48K+</div><div class="land-stat-lbl">Inversores activos</div></div>
       <div class="land-stat-divider"></div>
-      <div class="land-stat">
-        <div class="land-stat-val">99.9%</div>
-        <div class="land-stat-lbl">Tiempo de actividad</div>
-      </div>
+      <div class="land-stat"><div class="land-stat-val">99.9%</div><div class="land-stat-lbl">Tiempo de actividad</div></div>
       <div class="land-stat-divider"></div>
-      <div class="land-stat">
-        <div class="land-stat-val">+18.4%</div>
-        <div class="land-stat-lbl">Rendimiento promedio</div>
-      </div>
+      <div class="land-stat"><div class="land-stat-val">+18.4%</div><div class="land-stat-lbl">Rendimiento promedio</div></div>
     </div>
   </div>
-
-  <!-- TRUST CAROUSEL -->
   <div class="trust-strip">
     <div class="trust-label">Activos compatibles</div>
     <div class="trust-track-wrap">
       <div class="trust-track" id="trust-track">
-        <!-- BTC -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#F7931A"/>
-            <path d="M33.5 21.2c.5-3.1-1.9-4.8-5.1-5.9l1-4.2-2.6-.6-1 4c-.7-.2-1.3-.3-2-.5l1-4.1-2.6-.6-1 4.2c-.6-.1-1.1-.3-1.6-.4l-3.6-.9-.7 2.8s1.9.4 1.9.5c1 .3 1.2 1 1.2 1.6l-1.2 5c.1 0 .2.1.3.1-.1 0-.2-.1-.3-.1l-1.7 6.8c-.1.3-.4.8-1.1.6 0 .1-1.9-.5-1.9-.5l-1.3 3 3.4.8 1.9.5-1 4.2 2.6.6 1-4.2 2 .5-1 4.1 2.6.6 1-4.2c4.4.8 7.7.5 9.1-3.5 1.1-3.2-.1-5-2.4-6.2 1.7-.4 3-1.6 3.3-3.9zm-5.9 8.3c-.8 3.2-6.2 1.5-7.9 1l1.4-5.6c1.7.4 7.3 1.3 6.5 4.6zm.8-8.3c-.7 2.9-5.2 1.4-6.6 1.1l1.3-5.1c1.5.4 6.1 1 5.3 4z" fill="white"/>
-          </svg>
-          <span class="trust-name">Bitcoin</span>
-        </div>
-        <!-- ETH -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#627EEA"/>
-            <path d="M24 7v13.1l11 4.9L24 7z" fill="white" fill-opacity="0.6"/>
-            <path d="M24 7L13 25l11-4.9V7z" fill="white"/>
-            <path d="M24 33.7v7.3l11-15.2-11 7.9z" fill="white" fill-opacity="0.6"/>
-            <path d="M24 41v-7.3l-11-7.9L24 41z" fill="white"/>
-            <path d="M24 31.6l11-7.6-11-4.9v12.5z" fill="white" fill-opacity="0.2"/>
-            <path d="M13 24l11 7.6V19.1L13 24z" fill="white" fill-opacity="0.6"/>
-          </svg>
-          <span class="trust-name">Ethereum</span>
-        </div>
-        <!-- USDT -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#26A17B"/>
-            <path d="M27.2 22.1v-2.2h5.4v-3.4H15.4v3.4h5.4v2.2c-4.4.2-7.7 1.1-7.7 2.2s3.3 2 7.7 2.2V34h3.4v-7.5c4.4-.2 7.7-1.1 7.7-2.2s-3.3-2-7.7-2.2zm0 3.7v.1c-.1 0-.7.1-3.2.1s-3.1-.1-3.2-.1v-.1c-3.5-.2-6.1-.9-6.1-1.7s2.6-1.5 6.1-1.7v2.2c.1 0 .7.1 3.3.1s3.1-.1 3.1-.1v-2.2c3.5.2 6.1.9 6.1 1.7s-2.6 1.5-6.1 1.7z" fill="white"/>
-          </svg>
-          <span class="trust-name">USDT</span>
-        </div>
-        <!-- USDC -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#2775CA"/>
-            <path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm-1.8 27.6v-2c-3.8-.4-5.6-2.6-5.6-5.1h2.9c.1 1.6 1.1 2.8 2.7 3.1v-5.9c-3-.7-5.7-1.6-5.7-4.8 0-2.5 1.9-4.4 5.7-4.8v-1.8h1.9v1.8c3.4.4 5.2 2.4 5.2 4.7h-2.9c-.1-1.3-.9-2.4-2.3-2.7v5.5c3 .7 5.8 1.7 5.8 5 0 2.6-1.9 4.7-5.8 5.1v2h-1.9zm1.8-11.9v-5.1c-1.8.3-2.8 1.2-2.8 2.5 0 1.2.8 2.1 2.8 2.6zm1.9 2.4v5.3c1.9-.3 3-1.4 3-2.7 0-1.3-.9-2.2-3-2.6z" fill="white"/>
-          </svg>
-          <span class="trust-name">USDC</span>
-        </div>
-        <!-- BNB -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#F3BA2F"/>
-            <path d="M18.4 21.3L24 15.7l5.6 5.6 3.3-3.3L24 9.1l-8.9 8.9 3.3 3.3zM9.1 24l3.3-3.3 3.3 3.3-3.3 3.3L9.1 24zm9.3 2.7L24 32.3l5.6-5.6 3.3 3.3L24 38.9l-8.9-8.9-.1-.1 3.3-3.2zm14.9-2.7l3.3-3.3 3.3 3.3-3.3 3.3-3.3-3.3zM27.6 24l-3.6-3.6L20.4 24l3.6 3.6 3.6-3.6z" fill="white"/>
-          </svg>
-          <span class="trust-name">BNB</span>
-        </div>
-        <!-- SOL -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#9945FF"/>
-            <path d="M14 31.5h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm0-9h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm18.6-5.7l-2.8 2.8c-.1.1-.3.2-.5.2H13.5c-.5 0-.7-.5-.4-.8l2.8-2.8c.1-.1.3-.2.5-.2H33c.5 0 .7.5.6.8z" fill="url(#sol_g)"/>
-            <defs><linearGradient id="sol_g" x1="13" y1="24" x2="35" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs>
-          </svg>
-          <span class="trust-name">Solana</span>
-        </div>
-        <!-- XRP -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="24" fill="#346AA9"/>
-            <path d="M34 12h4.2l-9.5 9.3c-2.6 2.5-6.8 2.5-9.4 0L9.8 12H14l7.3 7.1c1.5 1.5 3.9 1.5 5.4 0L34 12zm4.2 24H34l-7.3-7.1c-1.5-1.5-3.9-1.5-5.4 0L14 36H9.8l9.5-9.3c2.6-2.5 6.8-2.5 9.4 0L38.2 36z" fill="white"/>
-          </svg>
-          <span class="trust-name">XRP</span>
-        </div>
-        <!-- Duplicate set for seamless loop -->
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F7931A"/><path d="M33.5 21.2c.5-3.1-1.9-4.8-5.1-5.9l1-4.2-2.6-.6-1 4c-.7-.2-1.3-.3-2-.5l1-4.1-2.6-.6-1 4.2c-.6-.1-1.1-.3-1.6-.4l-3.6-.9-.7 2.8s1.9.4 1.9.5c1 .3 1.2 1 1.2 1.6l-1.2 5c.1 0 .2.1.3.1-.1 0-.2-.1-.3-.1l-1.7 6.8c-.1.3-.4.8-1.1.6 0 .1-1.9-.5-1.9-.5l-1.3 3 3.4.8 1.9.5-1 4.2 2.6.6 1-4.2 2 .5-1 4.1 2.6.6 1-4.2c4.4.8 7.7.5 9.1-3.5 1.1-3.2-.1-5-2.4-6.2 1.7-.4 3-1.6 3.3-3.9zm-5.9 8.3c-.8 3.2-6.2 1.5-7.9 1l1.4-5.6c1.7.4 7.3 1.3 6.5 4.6zm.8-8.3c-.7 2.9-5.2 1.4-6.6 1.1l1.3-5.1c1.5.4 6.1 1 5.3 4z" fill="white"/></svg>
-          <span class="trust-name">Bitcoin</span>
-        </div>
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#627EEA"/><path d="M24 7v13.1l11 4.9L24 7z" fill="white" fill-opacity="0.6"/><path d="M24 7L13 25l11-4.9V7z" fill="white"/><path d="M24 33.7v7.3l11-15.2-11 7.9z" fill="white" fill-opacity="0.6"/><path d="M24 41v-7.3l-11-7.9L24 41z" fill="white"/><path d="M24 31.6l11-7.6-11-4.9v12.5z" fill="white" fill-opacity="0.2"/><path d="M13 24l11 7.6V19.1L13 24z" fill="white" fill-opacity="0.6"/></svg>
-          <span class="trust-name">Ethereum</span>
-        </div>
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#26A17B"/><path d="M27.2 22.1v-2.2h5.4v-3.4H15.4v3.4h5.4v2.2c-4.4.2-7.7 1.1-7.7 2.2s3.3 2 7.7 2.2V34h3.4v-7.5c4.4-.2 7.7-1.1 7.7-2.2s-3.3-2-7.7-2.2zm0 3.7v.1c-.1 0-.7.1-3.2.1s-3.1-.1-3.2-.1v-.1c-3.5-.2-6.1-.9-6.1-1.7s2.6-1.5 6.1-1.7v2.2c.1 0 .7.1 3.3.1s3.1-.1 3.1-.1v-2.2c3.5.2 6.1.9 6.1 1.7s-2.6 1.5-6.1 1.7z" fill="white"/></svg>
-          <span class="trust-name">USDT</span>
-        </div>
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#2775CA"/><path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm-1.8 27.6v-2c-3.8-.4-5.6-2.6-5.6-5.1h2.9c.1 1.6 1.1 2.8 2.7 3.1v-5.9c-3-.7-5.7-1.6-5.7-4.8 0-2.5 1.9-4.4 5.7-4.8v-1.8h1.9v1.8c3.4.4 5.2 2.4 5.2 4.7h-2.9c-.1-1.3-.9-2.4-2.3-2.7v5.5c3 .7 5.8 1.7 5.8 5 0 2.6-1.9 4.7-5.8 5.1v2h-1.9zm1.8-11.9v-5.1c-1.8.3-2.8 1.2-2.8 2.5 0 1.2.8 2.1 2.8 2.6zm1.9 2.4v5.3c1.9-.3 3-1.4 3-2.7 0-1.3-.9-2.2-3-2.6z" fill="white"/></svg>
-          <span class="trust-name">USDC</span>
-        </div>
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F3BA2F"/><path d="M18.4 21.3L24 15.7l5.6 5.6 3.3-3.3L24 9.1l-8.9 8.9 3.3 3.3zM9.1 24l3.3-3.3 3.3 3.3-3.3 3.3L9.1 24zm9.3 2.7L24 32.3l5.6-5.6 3.3 3.3L24 38.9l-8.9-8.9-.1-.1 3.3-3.2zm14.9-2.7l3.3-3.3 3.3 3.3-3.3 3.3-3.3-3.3zM27.6 24l-3.6-3.6L20.4 24l3.6 3.6 3.6-3.6z" fill="white"/></svg>
-          <span class="trust-name">BNB</span>
-        </div>
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#9945FF"/><path d="M14 31.5h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm0-9h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm18.6-5.7l-2.8 2.8c-.1.1-.3.2-.5.2H13.5c-.5 0-.7-.5-.4-.8l2.8-2.8c.1-.1.3-.2.5-.2H33c.5 0 .7.5.6.8z" fill="url(#sol_g2)"/><defs><linearGradient id="sol_g2" x1="13" y1="24" x2="35" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs></svg>
-          <span class="trust-name">Solana</span>
-        </div>
-        <div class="trust-item">
-          <svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#346AA9"/><path d="M34 12h4.2l-9.5 9.3c-2.6 2.5-6.8 2.5-9.4 0L9.8 12H14l7.3 7.1c1.5 1.5 3.9 1.5 5.4 0L34 12zm4.2 24H34l-7.3-7.1c-1.5-1.5-3.9-1.5-5.4 0L14 36H9.8l9.5-9.3c2.6-2.5 6.8-2.5 9.4 0L38.2 36z" fill="white"/></svg>
-          <span class="trust-name">XRP</span>
-        </div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F7931A"/><path d="M33.5 21.2c.5-3.1-1.9-4.8-5.1-5.9l1-4.2-2.6-.6-1 4c-.7-.2-1.3-.3-2-.5l1-4.1-2.6-.6-1 4.2c-.6-.1-1.1-.3-1.6-.4l-3.6-.9-.7 2.8s1.9.4 1.9.5c1 .3 1.2 1 1.2 1.6l-1.2 5c.1 0 .2.1.3.1-.1 0-.2-.1-.3-.1l-1.7 6.8c-.1.3-.4.8-1.1.6 0 .1-1.9-.5-1.9-.5l-1.3 3 3.4.8 1.9.5-1 4.2 2.6.6 1-4.2 2 .5-1 4.1 2.6.6 1-4.2c4.4.8 7.7.5 9.1-3.5 1.1-3.2-.1-5-2.4-6.2 1.7-.4 3-1.6 3.3-3.9zm-5.9 8.3c-.8 3.2-6.2 1.5-7.9 1l1.4-5.6c1.7.4 7.3 1.3 6.5 4.6zm.8-8.3c-.7 2.9-5.2 1.4-6.6 1.1l1.3-5.1c1.5.4 6.1 1 5.3 4z" fill="white"/></svg><span class="trust-name">Bitcoin</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#627EEA"/><path d="M24 7v13.1l11 4.9L24 7z" fill="white" fill-opacity="0.6"/><path d="M24 7L13 25l11-4.9V7z" fill="white"/><path d="M24 33.7v7.3l11-15.2-11 7.9z" fill="white" fill-opacity="0.6"/><path d="M24 41v-7.3l-11-7.9L24 41z" fill="white"/><path d="M24 31.6l11-7.6-11-4.9v12.5z" fill="white" fill-opacity="0.2"/><path d="M13 24l11 7.6V19.1L13 24z" fill="white" fill-opacity="0.6"/></svg><span class="trust-name">Ethereum</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#26A17B"/><path d="M27.2 22.1v-2.2h5.4v-3.4H15.4v3.4h5.4v2.2c-4.4.2-7.7 1.1-7.7 2.2s3.3 2 7.7 2.2V34h3.4v-7.5c4.4-.2 7.7-1.1 7.7-2.2s-3.3-2-7.7-2.2zm0 3.7v.1c-.1 0-.7.1-3.2.1s-3.1-.1-3.2-.1v-.1c-3.5-.2-6.1-.9-6.1-1.7s2.6-1.5 6.1-1.7v2.2c.1 0 .7.1 3.3.1s3.1-.1 3.1-.1v-2.2c3.5.2 6.1.9 6.1 1.7s-2.6 1.5-6.1 1.7z" fill="white"/></svg><span class="trust-name">USDT</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#2775CA"/><path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm-1.8 27.6v-2c-3.8-.4-5.6-2.6-5.6-5.1h2.9c.1 1.6 1.1 2.8 2.7 3.1v-5.9c-3-.7-5.7-1.6-5.7-4.8 0-2.5 1.9-4.4 5.7-4.8v-1.8h1.9v1.8c3.4.4 5.2 2.4 5.2 4.7h-2.9c-.1-1.3-.9-2.4-2.3-2.7v5.5c3 .7 5.8 1.7 5.8 5 0 2.6-1.9 4.7-5.8 5.1v2h-1.9zm1.8-11.9v-5.1c-1.8.3-2.8 1.2-2.8 2.5 0 1.2.8 2.1 2.8 2.6zm1.9 2.4v5.3c1.9-.3 3-1.4 3-2.7 0-1.3-.9-2.2-3-2.6z" fill="white"/></svg><span class="trust-name">USDC</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F3BA2F"/><path d="M18.4 21.3L24 15.7l5.6 5.6 3.3-3.3L24 9.1l-8.9 8.9 3.3 3.3zM9.1 24l3.3-3.3 3.3 3.3-3.3 3.3L9.1 24zm9.3 2.7L24 32.3l5.6-5.6 3.3 3.3L24 38.9l-8.9-8.9-.1-.1 3.3-3.2zm14.9-2.7l3.3-3.3 3.3 3.3-3.3 3.3-3.3-3.3zM27.6 24l-3.6-3.6L20.4 24l3.6 3.6 3.6-3.6z" fill="white"/></svg><span class="trust-name">BNB</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#9945FF"/><path d="M14 31.5h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm0-9h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm18.6-5.7l-2.8 2.8c-.1.1-.3.2-.5.2H13.5c-.5 0-.7-.5-.4-.8l2.8-2.8c.1-.1.3-.2.5-.2H33c.5 0 .7.5.6.8z" fill="url(#sol_g)"/><defs><linearGradient id="sol_g" x1="13" y1="24" x2="35" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs></svg><span class="trust-name">Solana</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#346AA9"/><path d="M34 12h4.2l-9.5 9.3c-2.6 2.5-6.8 2.5-9.4 0L9.8 12H14l7.3 7.1c1.5 1.5 3.9 1.5 5.4 0L34 12zm4.2 24H34l-7.3-7.1c-1.5-1.5-3.9-1.5-5.4 0L14 36H9.8l9.5-9.3c2.6-2.5 6.8-2.5 9.4 0L38.2 36z" fill="white"/></svg><span class="trust-name">XRP</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F7931A"/><path d="M33.5 21.2c.5-3.1-1.9-4.8-5.1-5.9l1-4.2-2.6-.6-1 4c-.7-.2-1.3-.3-2-.5l1-4.1-2.6-.6-1 4.2c-.6-.1-1.1-.3-1.6-.4l-3.6-.9-.7 2.8s1.9.4 1.9.5c1 .3 1.2 1 1.2 1.6l-1.2 5c.1 0 .2.1.3.1-.1 0-.2-.1-.3-.1l-1.7 6.8c-.1.3-.4.8-1.1.6 0 .1-1.9-.5-1.9-.5l-1.3 3 3.4.8 1.9.5-1 4.2 2.6.6 1-4.2 2 .5-1 4.1 2.6.6 1-4.2c4.4.8 7.7.5 9.1-3.5 1.1-3.2-.1-5-2.4-6.2 1.7-.4 3-1.6 3.3-3.9zm-5.9 8.3c-.8 3.2-6.2 1.5-7.9 1l1.4-5.6c1.7.4 7.3 1.3 6.5 4.6zm.8-8.3c-.7 2.9-5.2 1.4-6.6 1.1l1.3-5.1c1.5.4 6.1 1 5.3 4z" fill="white"/></svg><span class="trust-name">Bitcoin</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#627EEA"/><path d="M24 7v13.1l11 4.9L24 7z" fill="white" fill-opacity="0.6"/><path d="M24 7L13 25l11-4.9V7z" fill="white"/><path d="M24 33.7v7.3l11-15.2-11 7.9z" fill="white" fill-opacity="0.6"/><path d="M24 41v-7.3l-11-7.9L24 41z" fill="white"/><path d="M24 31.6l11-7.6-11-4.9v12.5z" fill="white" fill-opacity="0.2"/><path d="M13 24l11 7.6V19.1L13 24z" fill="white" fill-opacity="0.6"/></svg><span class="trust-name">Ethereum</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#26A17B"/><path d="M27.2 22.1v-2.2h5.4v-3.4H15.4v3.4h5.4v2.2c-4.4.2-7.7 1.1-7.7 2.2s3.3 2 7.7 2.2V34h3.4v-7.5c4.4-.2 7.7-1.1 7.7-2.2s-3.3-2-7.7-2.2zm0 3.7v.1c-.1 0-.7.1-3.2.1s-3.1-.1-3.2-.1v-.1c-3.5-.2-6.1-.9-6.1-1.7s2.6-1.5 6.1-1.7v2.2c.1 0 .7.1 3.3.1s3.1-.1 3.1-.1v-2.2c3.5.2 6.1.9 6.1 1.7s-2.6 1.5-6.1 1.7z" fill="white"/></svg><span class="trust-name">USDT</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#2775CA"/><path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm-1.8 27.6v-2c-3.8-.4-5.6-2.6-5.6-5.1h2.9c.1 1.6 1.1 2.8 2.7 3.1v-5.9c-3-.7-5.7-1.6-5.7-4.8 0-2.5 1.9-4.4 5.7-4.8v-1.8h1.9v1.8c3.4.4 5.2 2.4 5.2 4.7h-2.9c-.1-1.3-.9-2.4-2.3-2.7v5.5c3 .7 5.8 1.7 5.8 5 0 2.6-1.9 4.7-5.8 5.1v2h-1.9zm1.8-11.9v-5.1c-1.8.3-2.8 1.2-2.8 2.5 0 1.2.8 2.1 2.8 2.6zm1.9 2.4v5.3c1.9-.3 3-1.4 3-2.7 0-1.3-.9-2.2-3-2.6z" fill="white"/></svg><span class="trust-name">USDC</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F3BA2F"/><path d="M18.4 21.3L24 15.7l5.6 5.6 3.3-3.3L24 9.1l-8.9 8.9 3.3 3.3zM9.1 24l3.3-3.3 3.3 3.3-3.3 3.3L9.1 24zm9.3 2.7L24 32.3l5.6-5.6 3.3 3.3L24 38.9l-8.9-8.9-.1-.1 3.3-3.2zm14.9-2.7l3.3-3.3 3.3 3.3-3.3 3.3-3.3-3.3zM27.6 24l-3.6-3.6L20.4 24l3.6 3.6 3.6-3.6z" fill="white"/></svg><span class="trust-name">BNB</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#9945FF"/><path d="M14 31.5h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm0-9h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm18.6-5.7l-2.8 2.8c-.1.1-.3.2-.5.2H13.5c-.5 0-.7-.5-.4-.8l2.8-2.8c.1-.1.3-.2.5-.2H33c.5 0 .7.5.6.8z" fill="url(#sol_g2)"/><defs><linearGradient id="sol_g2" x1="13" y1="24" x2="35" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs></svg><span class="trust-name">Solana</span></div>
+        <div class="trust-item"><svg class="trust-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#346AA9"/><path d="M34 12h4.2l-9.5 9.3c-2.6 2.5-6.8 2.5-9.4 0L9.8 12H14l7.3 7.1c1.5 1.5 3.9 1.5 5.4 0L34 12zm4.2 24H34l-7.3-7.1c-1.5-1.5-3.9-1.5-5.4 0L14 36H9.8l9.5-9.3c2.6-2.5 6.8-2.5 9.4 0L38.2 36z" fill="white"/></svg><span class="trust-name">XRP</span></div>
       </div>
     </div>
   </div>
-
-  <!-- FEATURES -->
   <div class="land-feats">
-    <div class="land-feat">
-      <div class="land-feat-ico"><i class="fas fa-shield-halved"></i></div>
-      <h3>Seguridad de Nivel Bancario</h3>
-      <p>Verificación biométrica facial, cifrado AES-256 y autenticación de doble factor protegen tu inversión en todo momento.</p>
-    </div>
-    <div class="land-feat">
-      <div class="land-feat-ico"><i class="fab fa-bitcoin"></i></div>
-      <h3>Bitcoin como Activo Principal</h3>
-      <p>Concentra tu capital en el activo digital más consolidado del mundo, con seguimiento en tiempo real y reportes claros.</p>
-    </div>
-    <div class="land-feat">
-      <div class="land-feat-ico"><i class="fas fa-arrow-up-from-bracket"></i></div>
-      <h3>Retiros Controlados</h3>
-      <p>Proceso de retiro seguro con verificación de identidad, directo a tu cuenta bancaria en Colombia en pesos COP.</p>
-    </div>
+    <div class="land-feat"><div class="land-feat-ico"><i class="fas fa-shield-halved"></i></div><h3>Seguridad de Nivel Bancario</h3><p>Verificación biométrica facial, cifrado AES-256 y autenticación de doble factor protegen tu inversión en todo momento.</p></div>
+    <div class="land-feat"><div class="land-feat-ico"><i class="fab fa-bitcoin"></i></div><h3>Bitcoin como Activo Principal</h3><p>Concentra tu capital en el activo digital más consolidado del mundo, con seguimiento en tiempo real y reportes claros.</p></div>
+    <div class="land-feat"><div class="land-feat-ico"><i class="fas fa-arrow-up-from-bracket"></i></div><h3>Retiros Controlados</h3><p>Proceso de retiro seguro con verificación de identidad, directo a tu cuenta bancaria en Colombia en pesos COP.</p></div>
   </div>
-
   <div class="land-footer">© 2025 NexVault — Plataforma de Inversión Cripto · Colombia · Todos los derechos reservados</div>
 </div>
 
 <!-- ═══ LOGIN ═══ -->
 <div id="v-login" class="view">
   <div class="auth-card">
-    <div class="auth-logo">
-      <div class="auth-logo-mark">N</div>
-      <div class="auth-logo-name">Nex<span>Vault</span></div>
-    </div>
+    <div class="auth-logo"><div class="auth-logo-mark">N</div><div class="auth-logo-name">Nex<span>Vault</span></div></div>
     <h2 class="auth-title">Bienvenido de vuelta</h2>
     <p class="auth-sub">Ingresa a tu cuenta de inversión</p>
     <div class="auth-success" id="login-success"></div>
@@ -653,10 +484,7 @@ a{color:inherit;text-decoration:none}
 <!-- ═══ REGISTER ═══ -->
 <div id="v-register" class="view">
   <div class="auth-card">
-    <div class="auth-logo">
-      <div class="auth-logo-mark">N</div>
-      <div class="auth-logo-name">Nex<span>Vault</span></div>
-    </div>
+    <div class="auth-logo"><div class="auth-logo-mark">N</div><div class="auth-logo-name">Nex<span>Vault</span></div></div>
     <h2 class="auth-title">Crear cuenta</h2>
     <p class="auth-sub">Regístrate y comienza a invertir en Bitcoin</p>
     <div class="auth-success" id="reg-success"></div>
@@ -695,14 +523,9 @@ a{color:inherit;text-decoration:none}
 <!-- ═══ APP ═══ -->
 <div id="v-app" class="view">
 <div class="app-shell">
-
   <div class="sb-overlay" id="sb-overlay" onclick="closeSidebar()"></div>
-
   <aside class="sidebar" id="sidebar">
-    <div class="sb-head">
-      <div class="sb-logo-mark">N</div>
-      <div class="sb-logo-name">Nex<span>Vault</span></div>
-    </div>
+    <div class="sb-head"><div class="sb-logo-mark">N</div><div class="sb-logo-name">Nex<span>Vault</span></div></div>
     <div class="sb-nav">
       <div class="sb-section">Principal</div>
       <div class="sb-link active" onclick="navTo('pg-dashboard',this)"><i class="fas fa-chart-pie"></i>Portafolio</div>
@@ -715,15 +538,11 @@ a{color:inherit;text-decoration:none}
     <div class="sb-footer">
       <div class="sb-user">
         <div class="sb-avatar">C</div>
-        <div class="sb-user-info">
-          <div class="sb-user-name">Jorge Rodriguez</div>
-          <div class="sb-user-role">Inversor activo</div>
-        </div>
+        <div class="sb-user-info"><div class="sb-user-name">Jorge Rodriguez</div><div class="sb-user-role">Inversor activo</div></div>
         <button class="sb-signout" onclick="signOut()" title="Cerrar sesión"><i class="fas fa-right-from-bracket"></i></button>
       </div>
     </div>
   </aside>
-
   <main class="main-content">
     <header class="topbar">
       <div class="topbar-left">
@@ -738,8 +557,6 @@ a{color:inherit;text-decoration:none}
 
     <!-- DASHBOARD -->
     <div class="page-section on inner" id="pg-dashboard">
-
-      <!-- TRUST CAROUSEL (top of dashboard) -->
       <div class="dash-trust-strip">
         <div class="dash-trust-label">Activos compatibles</div>
         <div class="dash-trust-track-wrap">
@@ -750,7 +567,6 @@ a{color:inherit;text-decoration:none}
             <div class="dash-trust-item"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#2775CA"/><path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm-1.8 27.6v-2c-3.8-.4-5.6-2.6-5.6-5.1h2.9c.1 1.6 1.1 2.8 2.7 3.1v-5.9c-3-.7-5.7-1.6-5.7-4.8 0-2.5 1.9-4.4 5.7-4.8v-1.8h1.9v1.8c3.4.4 5.2 2.4 5.2 4.7h-2.9c-.1-1.3-.9-2.4-2.3-2.7v5.5c3 .7 5.8 1.7 5.8 5 0 2.6-1.9 4.7-5.8 5.1v2h-1.9zm1.8-11.9v-5.1c-1.8.3-2.8 1.2-2.8 2.5 0 1.2.8 2.1 2.8 2.6zm1.9 2.4v5.3c1.9-.3 3-1.4 3-2.7 0-1.3-.9-2.2-3-2.6z" fill="white"/></svg><span>USDC</span></div>
             <div class="dash-trust-item"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F3BA2F"/><path d="M18.4 21.3L24 15.7l5.6 5.6 3.3-3.3L24 9.1l-8.9 8.9 3.3 3.3zM9.1 24l3.3-3.3 3.3 3.3-3.3 3.3L9.1 24zm9.3 2.7L24 32.3l5.6-5.6 3.3 3.3L24 38.9l-8.9-8.9-.1-.1 3.3-3.2zm14.9-2.7l3.3-3.3 3.3 3.3-3.3 3.3-3.3-3.3zM27.6 24l-3.6-3.6L20.4 24l3.6 3.6 3.6-3.6z" fill="white"/></svg><span>BNB</span></div>
             <div class="dash-trust-item"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#9945FF"/><path d="M14 31.5h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm0-9h15.8c.2 0 .4.1.5.2l2.8 2.8c.3.3.1.8-.4.8H17c-.2 0-.4-.1-.5-.2l-2.8-2.8c-.3-.3-.1-.8.3-.8zm18.6-5.7l-2.8 2.8c-.1.1-.3.2-.5.2H13.5c-.5 0-.7-.5-.4-.8l2.8-2.8c.1-.1.3-.2.5-.2H33c.5 0 .7.5.6.8z" fill="url(#sg1)"/><defs><linearGradient id="sg1" x1="13" y1="24" x2="35" y2="24" gradientUnits="userSpaceOnUse"><stop stop-color="#9945FF"/><stop offset="1" stop-color="#14F195"/></linearGradient></defs></svg><span>SOL</span></div>
-            <!-- Duplicate -->
             <div class="dash-trust-item"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#F7931A"/><path d="M33.5 21.2c.5-3.1-1.9-4.8-5.1-5.9l1-4.2-2.6-.6-1 4c-.7-.2-1.3-.3-2-.5l1-4.1-2.6-.6-1 4.2c-.6-.1-1.1-.3-1.6-.4l-3.6-.9-.7 2.8s1.9.4 1.9.5c1 .3 1.2 1 1.2 1.6l-1.2 5c.1 0 .2.1.3.1-.1 0-.2-.1-.3-.1l-1.7 6.8c-.1.3-.4.8-1.1.6 0 .1-1.9-.5-1.9-.5l-1.3 3 3.4.8 1.9.5-1 4.2 2.6.6 1-4.2 2 .5-1 4.1 2.6.6 1-4.2c4.4.8 7.7.5 9.1-3.5 1.1-3.2-.1-5-2.4-6.2 1.7-.4 3-1.6 3.3-3.9zm-5.9 8.3c-.8 3.2-6.2 1.5-7.9 1l1.4-5.6c1.7.4 7.3 1.3 6.5 4.6zm.8-8.3c-.7 2.9-5.2 1.4-6.6 1.1l1.3-5.1c1.5.4 6.1 1 5.3 4z" fill="white"/></svg><span>BTC</span></div>
             <div class="dash-trust-item"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#627EEA"/><path d="M24 7v13.1l11 4.9L24 7z" fill="white" fill-opacity="0.6"/><path d="M24 7L13 25l11-4.9V7z" fill="white"/><path d="M24 33.7v7.3l11-15.2-11 7.9z" fill="white" fill-opacity="0.6"/><path d="M24 41v-7.3l-11-7.9L24 41z" fill="white"/><path d="M24 31.6l11-7.6-11-4.9v12.5z" fill="white" fill-opacity="0.2"/><path d="M13 24l11 7.6V19.1L13 24z" fill="white" fill-opacity="0.6"/></svg><span>ETH</span></div>
             <div class="dash-trust-item"><svg width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#26A17B"/><path d="M27.2 22.1v-2.2h5.4v-3.4H15.4v3.4h5.4v2.2c-4.4.2-7.7 1.1-7.7 2.2s3.3 2 7.7 2.2V34h3.4v-7.5c4.4-.2 7.7-1.1 7.7-2.2s-3.3-2-7.7-2.2zm0 3.7v.1c-.1 0-.7.1-3.2.1s-3.1-.1-3.2-.1v-.1c-3.5-.2-6.1-.9-6.1-1.7s2.6-1.5 6.1-1.7v2.2c.1 0 .7.1 3.3.1s3.1-.1 3.1-.1v-2.2c3.5.2 6.1.9 6.1 1.7s-2.6 1.5-6.1 1.7z" fill="white"/></svg><span>USDT</span></div>
@@ -760,90 +576,28 @@ a{color:inherit;text-decoration:none}
           </div>
         </div>
       </div>
-
       <div class="stat-grid">
-        <div class="stat-card">
-          <div class="stat-card-head">
-            <div class="stat-icon purple"><i class="fas fa-wallet"></i></div>
-            <span class="stat-tag up">Activo</span>
-          </div>
-          <div class="stat-val">$23.880.000</div>
-          <div class="stat-lbl">Total Invertido (COP)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-head">
-            <div class="stat-icon green"><i class="fas fa-chart-line"></i></div>
-            <span class="stat-tag up">+1100%</span>
-          </div>
-          <div class="stat-val" style="color:#10B981">$262.669.000</div>
-          <div class="stat-lbl">Rendimientos Totales (COP)</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card-head">
-            <div class="stat-icon amber"><i class="fas fa-coins"></i></div>
-            <span class="stat-tag pending">COP</span>
-          </div>
-          <div class="stat-val">$286.549.000</div>
-          <div class="stat-lbl">Valor del Portafolio (COP)</div>
-        </div>
+        <div class="stat-card"><div class="stat-card-head"><div class="stat-icon purple"><i class="fas fa-wallet"></i></div><span class="stat-tag up">Activo</span></div><div class="stat-val">$23.880.000</div><div class="stat-lbl">Total Invertido (COP)</div></div>
+        <div class="stat-card"><div class="stat-card-head"><div class="stat-icon green"><i class="fas fa-chart-line"></i></div><span class="stat-tag up">+1100%</span></div><div class="stat-val" style="color:#10B981">$262.669.000</div><div class="stat-lbl">Rendimientos Totales (COP)</div></div>
+        <div class="stat-card"><div class="stat-card-head"><div class="stat-icon amber"><i class="fas fa-coins"></i></div><span class="stat-tag pending">COP</span></div><div class="stat-val">$286.549.000</div><div class="stat-lbl">Valor del Portafolio (COP)</div></div>
       </div>
-
       <div class="section-title">Distribución de Activos</div>
       <div class="portfolio-grid">
         <div class="portfolio-card">
           <div class="alloc-list">
-            <!-- BTC -->
-            <div class="alloc-item">
-              <div class="alloc-icon btc">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#F7931A"/><path d="M22.5 14.1c.3-2.1-1.3-3.3-3.5-4l.7-2.9-1.7-.4-.7 2.8-.9-.2.7-2.8-1.7-.4-.7 2.9c-.5-.1-1.1-.3-1.6-.4l.7-2.9-1.7-.4-.7 2.9-.3-.1-2.3-.6-.4 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.1c.1 0 .1 0 .2.1h-.2l-1.1 4.3c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.5.6.2-.7 2.9 1.7.4.7-2.9.9.2-.7 2.9 1.7.4.7-2.9c2.2.4 3.9.2 4.6-1.7.5-1.6-.1-2.5-1.2-3.1.9-.2 1.5-.8 1.7-2zm-3 4.2c-.4 1.5-2.9.7-3.7.5l.7-2.7c.8.2 3.4.6 3 2.2zm.4-4.3c-.3 1.4-2.4.7-3.1.5l.6-2.5c.7.2 3 .5 2.5 2z" fill="#fff"/></svg>
-              </div>
-              <div class="alloc-info">
-                <div class="alloc-name">Bitcoin <span class="alloc-ticker">BTC</span></div>
-                <div class="alloc-val">$275.087.040 COP</div>
-                <div class="alloc-bar"><div class="alloc-fill btc" style="width:96%"></div></div>
-              </div>
-              <div class="alloc-pct">96%</div>
-            </div>
-            <!-- ETH -->
-            <div class="alloc-item">
-              <div class="alloc-icon eth">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#627EEA"/><path d="M16.498 4v8.87l7.497 3.35z" fill="#fff" fill-opacity=".6"/><path d="M16.498 4L9 16.22l7.498-3.35z" fill="#fff"/><path d="M16.498 21.968v6.027L24 17.616z" fill="#fff" fill-opacity=".6"/><path d="M16.498 27.995v-6.028L9 17.616z" fill="#fff"/><path d="M16.498 20.573l7.497-4.353-7.497-3.348z" fill="#fff" fill-opacity=".2"/><path d="M9 16.22l7.498 4.353v-7.701z" fill="#fff" fill-opacity=".6"/></svg>
-              </div>
-              <div class="alloc-info">
-                <div class="alloc-name">Ethereum <span class="alloc-ticker">ETH</span></div>
-                <div class="alloc-val">$8.596.470 COP</div>
-                <div class="alloc-bar"><div class="alloc-fill eth" style="width:3%"></div></div>
-              </div>
-              <div class="alloc-pct">3%</div>
-            </div>
-            <!-- USDT -->
-            <div class="alloc-item">
-              <div class="alloc-icon usdt">
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#26A17B"/><path d="M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061 1.207 0 1.812-.05 1.925-.06v-2.643c3.88.173 6.775.85 6.775 1.658 0 .81-2.895 1.485-6.775 1.657m0-3.59v-2.366h5.414V8.5H8.595v2.927h5.414v2.365c-4.4.202-7.709 1.074-7.709 2.124 0 1.051 3.309 1.922 7.709 2.124v7.598h3.913v-7.6c4.393-.202 7.694-1.073 7.694-2.122 0-1.05-3.3-1.92-7.694-2.123" fill="#fff"/></svg>
-              </div>
-              <div class="alloc-info">
-                <div class="alloc-name">Tether <span class="alloc-ticker">USDT</span></div>
-                <div class="alloc-val">$2.865.490 COP</div>
-                <div class="alloc-bar"><div class="alloc-fill usdt" style="width:1%"></div></div>
-              </div>
-              <div class="alloc-pct">1%</div>
-            </div>
+            <div class="alloc-item"><div class="alloc-icon btc"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#F7931A"/><path d="M22.5 14.1c.3-2.1-1.3-3.3-3.5-4l.7-2.9-1.7-.4-.7 2.8-.9-.2.7-2.8-1.7-.4-.7 2.9c-.5-.1-1.1-.3-1.6-.4l.7-2.9-1.7-.4-.7 2.9-.3-.1-2.3-.6-.4 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.1c.1 0 .1 0 .2.1h-.2l-1.1 4.3c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.5.6.2-.7 2.9 1.7.4.7-2.9.9.2-.7 2.9 1.7.4.7-2.9c2.2.4 3.9.2 4.6-1.7.5-1.6-.1-2.5-1.2-3.1.9-.2 1.5-.8 1.7-2zm-3 4.2c-.4 1.5-2.9.7-3.7.5l.7-2.7c.8.2 3.4.6 3 2.2zm.4-4.3c-.3 1.4-2.4.7-3.1.5l.6-2.5c.7.2 3 .5 2.5 2z" fill="#fff"/></svg></div><div class="alloc-info"><div class="alloc-name">Bitcoin <span class="alloc-ticker">BTC</span></div><div class="alloc-val">$275.087.040 COP</div><div class="alloc-bar"><div class="alloc-fill btc" style="width:96%"></div></div></div><div class="alloc-pct">96%</div></div>
+            <div class="alloc-item"><div class="alloc-icon eth"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#627EEA"/><path d="M16.498 4v8.87l7.497 3.35z" fill="#fff" fill-opacity=".6"/><path d="M16.498 4L9 16.22l7.498-3.35z" fill="#fff"/><path d="M16.498 21.968v6.027L24 17.616z" fill="#fff" fill-opacity=".6"/><path d="M16.498 27.995v-6.028L9 17.616z" fill="#fff"/><path d="M16.498 20.573l7.497-4.353-7.497-3.348z" fill="#fff" fill-opacity=".2"/><path d="M9 16.22l7.498 4.353v-7.701z" fill="#fff" fill-opacity=".6"/></svg></div><div class="alloc-info"><div class="alloc-name">Ethereum <span class="alloc-ticker">ETH</span></div><div class="alloc-val">$8.596.470 COP</div><div class="alloc-bar"><div class="alloc-fill eth" style="width:3%"></div></div></div><div class="alloc-pct">3%</div></div>
+            <div class="alloc-item"><div class="alloc-icon usdt"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="#26A17B"/><path d="M17.922 17.383v-.002c-.11.008-.677.042-1.942.042-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658 0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061 1.207 0 1.812-.05 1.925-.06v-2.643c3.88.173 6.775.85 6.775 1.658 0 .81-2.895 1.485-6.775 1.657m0-3.59v-2.366h5.414V8.5H8.595v2.927h5.414v2.365c-4.4.202-7.709 1.074-7.709 2.124 0 1.051 3.309 1.922 7.709 2.124v7.598h3.913v-7.6c4.393-.202 7.694-1.073 7.694-2.122 0-1.05-3.3-1.92-7.694-2.123" fill="#fff"/></svg></div><div class="alloc-info"><div class="alloc-name">Tether <span class="alloc-ticker">USDT</span></div><div class="alloc-val">$2.865.490 COP</div><div class="alloc-bar"><div class="alloc-fill usdt" style="width:1%"></div></div></div><div class="alloc-pct">1%</div></div>
           </div>
         </div>
-
         <div class="btc-card">
-          <div class="btc-logo">
-            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="56" height="56"><circle cx="16" cy="16" r="16" fill="#F7931A"/><path d="M22.5 14.1c.3-2.1-1.3-3.3-3.5-4l.7-2.9-1.7-.4-.7 2.8-.9-.2.7-2.8-1.7-.4-.7 2.9c-.5-.1-1.1-.3-1.6-.4l.7-2.9-1.7-.4-.7 2.9-.3-.1-2.3-.6-.4 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.1c.1 0 .1 0 .2.1h-.2l-1.1 4.3c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.5.6.2-.7 2.9 1.7.4.7-2.9.9.2-.7 2.9 1.7.4.7-2.9c2.2.4 3.9.2 4.6-1.7.5-1.6-.1-2.5-1.2-3.1.9-.2 1.5-.8 1.7-2zm-3 4.2c-.4 1.5-2.9.7-3.7.5l.7-2.7c.8.2 3.4.6 3 2.2zm.4-4.3c-.3 1.4-2.4.7-3.1.5l.6-2.5c.7.2 3 .5 2.5 2z" fill="#fff"/></svg>
-          </div>
+          <div class="btc-logo"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="56" height="56"><circle cx="16" cy="16" r="16" fill="#F7931A"/><path d="M22.5 14.1c.3-2.1-1.3-3.3-3.5-4l.7-2.9-1.7-.4-.7 2.8-.9-.2.7-2.8-1.7-.4-.7 2.9c-.5-.1-1.1-.3-1.6-.4l.7-2.9-1.7-.4-.7 2.9-.3-.1-2.3-.6-.4 1.8s1.3.3 1.2.3c.7.2.8.6.8 1l-.8 3.1c.1 0 .1 0 .2.1h-.2l-1.1 4.3c-.1.2-.3.6-.8.4 0 0-1.2-.3-1.2-.3l-.8 1.9 2.2.5.6.2-.7 2.9 1.7.4.7-2.9.9.2-.7 2.9 1.7.4.7-2.9c2.2.4 3.9.2 4.6-1.7.5-1.6-.1-2.5-1.2-3.1.9-.2 1.5-.8 1.7-2zm-3 4.2c-.4 1.5-2.9.7-3.7.5l.7-2.7c.8.2 3.4.6 3 2.2zm.4-4.3c-.3 1.4-2.4.7-3.1.5l.6-2.5c.7.2 3 .5 2.5 2z" fill="#fff"/></svg></div>
           <div class="btc-name">Bitcoin — Activo Principal</div>
           <div class="btc-prc">$270.123.696 COP</div>
           <div class="btc-chg"><i class="fas fa-arrow-trend-up"></i> +3,2% esta semana</div>
-          <div style="margin-top:16px;font-size:12px;color:var(--tm);line-height:1.7">
-            Activo principal del portafolio.<br/>Rendimiento acumulado: <strong style="color:#10B981">+1100%</strong>
-          </div>
+          <div style="margin-top:16px;font-size:12px;color:var(--tm);line-height:1.7">Activo principal del portafolio.<br/>Rendimiento acumulado: <strong style="color:#10B981">+1100%</strong></div>
         </div>
       </div>
-
       <div class="section-title">Últimas Transacciones</div>
       <div class="tx-table-wrap">
         <table class="tx-table">
@@ -890,10 +644,7 @@ a{color:inherit;text-decoration:none}
           </div>
           <div class="wd-form-group">
             <label class="wd-label">Cuenta bancaria de destino</label>
-            <div class="wd-bank-display">
-              <strong>Bancolombia — Cuenta de Ahorros</strong>
-              No. **** **** 9560 · Jorge Rodriguez
-            </div>
+            <div class="wd-bank-display"><strong>Bancolombia — Cuenta de Ahorros</strong>No. **** **** 9560 · Jorge Rodriguez</div>
           </div>
           <button class="btn-wd" onclick="openWdConfirm()">Solicitar Retiro</button>
         </div>
@@ -916,12 +667,12 @@ a{color:inherit;text-decoration:none}
         <div class="profile-avatar-card">
           <div class="profile-avatar-big">C</div>
           <div class="profile-name">Jorge Rodriguez</div>
-          <div class="profile-email-sm"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f79496859b9884d99a929993988d96b7909a969e9bd994989a">[email&#160;protected]</a></div>
+          <div class="profile-email-sm">jorge@example.com</div>
           <div class="profile-badge-kyc"><i class="fas fa-circle-check" style="font-size:11px"></i>Verificado</div>
         </div>
         <div class="profile-info-card">
           <div class="profile-info-row"><span class="profile-info-lbl">Nombre completo</span><span class="profile-info-val">Jorge Rodriguez</span></div>
-          <div class="profile-info-row"><span class="profile-info-lbl">Correo electrónico</span><span class="profile-info-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c2f2d3e20233f622129222823362d0c2b212d2520622f2321">[email&#160;protected]</a></span></div>
+          <div class="profile-info-row"><span class="profile-info-lbl">Correo electrónico</span><span class="profile-info-val">jorge@example.com</span></div>
           <div class="profile-info-row"><span class="profile-info-lbl">País</span><span class="profile-info-val">🇨🇴 Colombia</span></div>
           <div class="profile-info-row"><span class="profile-info-lbl">Miembro desde</span><span class="profile-info-val">2025</span></div>
           <div class="profile-info-row"><span class="profile-info-lbl">Banco</span><span class="profile-info-val">Bancolombia</span></div>
@@ -935,19 +686,12 @@ a{color:inherit;text-decoration:none}
 </div>
 </div>
 
-<!-- ════════════════════════════════
-     WITHDRAWAL FLOW MODALS
-════════════════════════════════ -->
-
 <!-- PASO 1: Confirmar retiro -->
 <div class="modal-overlay" id="wd-confirm-modal">
   <div class="modal">
     <div class="modal-icon"><i class="fas fa-arrow-up-from-bracket"></i></div>
     <div class="modal-title">Confirmar solicitud de retiro</div>
-    <div class="modal-body">
-      Estás solicitando un retiro de <strong id="wd-confirm-amt">—</strong>.<br/><br/>
-      Por favor confirma para continuar con la verificación.
-    </div>
+    <div class="modal-body">Estás solicitando un retiro de <strong id="wd-confirm-amt">—</strong>.<br/><br/>Por favor confirma para continuar con la verificación.</div>
     <div class="modal-actions">
       <button class="btn-modal-sec" onclick="closeModal('wd-confirm-modal')">Cancelar</button>
       <button class="btn-modal-pri" onclick="goToStep2()">Confirmar retiro</button>
@@ -958,7 +702,6 @@ a{color:inherit;text-decoration:none}
 <!-- PASO 2: Verificación de identidad -->
 <div class="modal-overlay" id="wd-id-modal">
   <div class="modal">
-    <!-- progress dots -->
     <div style="display:flex;gap:6px;margin-bottom:22px">
       <div style="flex:1;height:3px;border-radius:2px;background:var(--p2)"></div>
       <div id="dot2" style="flex:1;height:3px;border-radius:2px;background:var(--bdr)"></div>
@@ -968,32 +711,12 @@ a{color:inherit;text-decoration:none}
     <div class="modal-icon"><i class="fas fa-id-card"></i></div>
     <div class="modal-title">Verificación de identidad</div>
     <div class="modal-body" style="margin-bottom:18px">Sube los documentos requeridos para verificar tu identidad y procesar el retiro.</div>
-
     <div class="uc-grid">
-      <!-- Frontal -->
-      <div class="uc-card" id="uc-front">
-        <input type="file" accept="image/*,.pdf" onchange="handleUpload('uc-front','upl-front',this)"/>
-        <div class="uc-done-mark"><i class="fas fa-check"></i></div>
-        <div class="uc-icon"><i class="fas fa-id-card"></i></div>
-        <div class="uc-label">Documento de identidad<br/><strong>(Frontal)</strong></div>
-      </div>
-      <!-- Posterior -->
-      <div class="uc-card" id="uc-back">
-        <input type="file" accept="image/*,.pdf" onchange="handleUpload('uc-back','upl-back',this)"/>
-        <div class="uc-done-mark"><i class="fas fa-check"></i></div>
-        <div class="uc-icon"><i class="fas fa-id-card-clip"></i></div>
-        <div class="uc-label">Documento de identidad<br/><strong>(Posterior)</strong></div>
-      </div>
-      <!-- Domicilio -->
-      <div class="uc-card uc-single" id="uc-addr">
-        <input type="file" accept="image/*,.pdf" onchange="handleUpload('uc-addr','upl-addr',this)"/>
-        <div class="uc-done-mark"><i class="fas fa-check"></i></div>
-        <div class="uc-icon"><i class="fas fa-file-invoice"></i></div>
-        <div class="uc-label">Comprobante de domicilio<br/><strong>(Factura o recibo de servicios)</strong></div>
-      </div>
+      <div class="uc-card" id="uc-front"><input type="file" accept="image/*,.pdf" onchange="handleUpload('uc-front','upl-front',this)"/><div class="uc-done-mark"><i class="fas fa-check"></i></div><div class="uc-icon"><i class="fas fa-id-card"></i></div><div class="uc-label">Documento de identidad<br/><strong>(Frontal)</strong></div></div>
+      <div class="uc-card" id="uc-back"><input type="file" accept="image/*,.pdf" onchange="handleUpload('uc-back','upl-back',this)"/><div class="uc-done-mark"><i class="fas fa-check"></i></div><div class="uc-icon"><i class="fas fa-id-card-clip"></i></div><div class="uc-label">Documento de identidad<br/><strong>(Posterior)</strong></div></div>
+      <div class="uc-card uc-single" id="uc-addr"><input type="file" accept="image/*,.pdf" onchange="handleUpload('uc-addr','upl-addr',this)"/><div class="uc-done-mark"><i class="fas fa-check"></i></div><div class="uc-icon"><i class="fas fa-file-invoice"></i></div><div class="uc-label">Comprobante de domicilio<br/><strong>(Factura o recibo de servicios)</strong></div></div>
     </div>
     <div id="uc-err" style="font-size:12px;color:var(--r);display:none;margin-bottom:12px;align-items:center;gap:6px"><i class="fas fa-circle-exclamation"></i>Debes subir los tres documentos para continuar.</div>
-
     <div class="modal-actions">
       <button class="btn-modal-sec" onclick="closeModal('wd-id-modal');resetWdFlow()">Cancelar</button>
       <button class="btn-modal-pri" id="btn-id-continue" onclick="goToStep3()">Continuar</button>
@@ -1013,41 +736,18 @@ a{color:inherit;text-decoration:none}
     <div class="modal-icon"><i class="fas fa-face-viewfinder"></i></div>
     <div class="modal-title">Reconocimiento facial</div>
     <div class="modal-body" style="margin-bottom:18px">Por favor realiza la verificación facial para completar tu solicitud.</div>
-
-    <!-- Camera loading spinner -->
-    <div id="cam-loading" style="text-align:center;padding:20px 0;display:none">
-      <div class="spinner" style="margin-bottom:10px"></div>
-      <div style="font-size:13px;color:var(--tm)">Iniciando cámara...</div>
-    </div>
-
-    <!-- Camera error state -->
-    <div id="cam-error" style="display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:var(--rad3);padding:16px;text-align:center;margin-bottom:16px">
-      <div style="font-size:22px;margin-bottom:8px">📷</div>
-      <div style="font-size:13.5px;color:var(--r);font-weight:600;margin-bottom:6px">No se pudo acceder a la cámara.</div>
-      <div style="font-size:12.5px;color:var(--tm);margin-bottom:14px">Por favor permite el acceso para continuar.</div>
-      <button class="btn-modal-pri" style="width:auto;padding:9px 22px;font-size:13px" onclick="retryCameraAccess()">Reintentar</button>
-    </div>
-
-    <!-- Face scan box with live camera -->
+    <div id="cam-loading" style="text-align:center;padding:20px 0;display:none"><div class="spinner" style="margin-bottom:10px"></div><div style="font-size:13px;color:var(--tm)">Iniciando cámara...</div></div>
+    <div id="cam-error" style="display:none;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:var(--rad3);padding:16px;text-align:center;margin-bottom:16px"><div style="font-size:22px;margin-bottom:8px">📷</div><div style="font-size:13.5px;color:var(--r);font-weight:600;margin-bottom:6px">No se pudo acceder a la cámara.</div><div style="font-size:12.5px;color:var(--tm);margin-bottom:14px">Por favor permite el acceso para continuar.</div><button class="btn-modal-pri" style="width:auto;padding:9px 22px;font-size:13px" onclick="retryCameraAccess()">Reintentar</button></div>
     <div class="face-scan-box" id="face-scan-box">
       <div class="face-oval" id="face-oval" style="position:relative;overflow:hidden;width:130px;height:160px;border-radius:50%">
         <div class="face-scan-line"></div>
-        <!-- Live video feed inside oval -->
         <video id="face-video" autoplay playsinline muted style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;display:none;transform:scaleX(-1)"></video>
-        <!-- Fallback icon (shown when no camera) -->
         <div class="face-oval-inner" id="face-oval-icon">🙂</div>
       </div>
       <div class="face-instruction" id="face-inst">Coloca tu rostro dentro del óvalo y presiona "Iniciar verificación"</div>
       <div class="face-status" id="face-stat"></div>
     </div>
-
-    <!-- Camera switch button -->
-    <div style="text-align:center;margin-bottom:16px">
-      <button id="btn-cam-switch" onclick="switchCamera()" style="display:none;background:var(--s);border:1px solid var(--bdr);color:var(--tm);font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:var(--rad3);cursor:pointer;transition:all .2s" onmouseover="this.style.color='var(--t)'" onmouseout="this.style.color='var(--tm)'">
-        <i class="fas fa-camera-rotate" style="margin-right:6px"></i>Cambiar cámara
-      </button>
-    </div>
-
+    <div style="text-align:center;margin-bottom:16px"><button id="btn-cam-switch" onclick="switchCamera()" style="display:none;background:var(--s);border:1px solid var(--bdr);color:var(--tm);font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:var(--rad3);cursor:pointer;transition:all .2s"><i class="fas fa-camera-rotate" style="margin-right:6px"></i>Cambiar cámara</button></div>
     <div class="modal-actions">
       <button class="btn-modal-sec" onclick="cancelFaceModal()">Cancelar</button>
       <button class="btn-modal-pri" id="btn-face-start" onclick="startFaceScan()">Iniciar verificación</button>
@@ -1055,395 +755,329 @@ a{color:inherit;text-decoration:none}
   </div>
 </div>
 
-<!-- PASO 4: Procesando -->
+<!-- ════════════════════════════════
+     PASO 4: PROCESSING — UPDATED
+════════════════════════════════ -->
 <div class="modal-overlay" id="wd-processing-modal">
   <div class="modal" style="text-align:center">
-    <div style="display:flex;gap:6px;margin-bottom:22px">
+    <div style="display:flex;gap:6px;margin-bottom:28px">
       <div style="flex:1;height:3px;border-radius:2px;background:var(--g)"></div>
       <div style="flex:1;height:3px;border-radius:2px;background:var(--g)"></div>
       <div style="flex:1;height:3px;border-radius:2px;background:var(--p2)"></div>
       <div style="flex:1;height:3px;border-radius:2px;background:var(--bdr)"></div>
     </div>
-    <div class="spinner"></div>
-    <div class="modal-title">Procesando tu solicitud...</div>
-    <div class="modal-body" style="margin-bottom:0">Estamos registrando tu información de verificación. Por favor espera unos momentos.</div>
+
+    <!-- Circular progress ring -->
+    <div class="proc-ring-wrap">
+      <svg width="130" height="130" viewBox="0 0 130 130">
+        <defs>
+          <linearGradient id="procGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5B21B6"/>
+            <stop offset="100%" stop-color="#9D5CF6"/>
+          </linearGradient>
+        </defs>
+        <circle class="proc-ring-bg" cx="65" cy="65" r="54"/>
+        <circle class="proc-ring-fill" id="proc-ring-fill" cx="65" cy="65" r="54"/>
+      </svg>
+      <div class="proc-pct-label"><span id="proc-pct-num">0</span>%</div>
+    </div>
+
+    <div class="modal-title" style="margin-bottom:6px">Validando su solicitud</div>
+    <div style="font-size:12px;color:var(--tf);margin-bottom:20px;letter-spacing:0.5px;font-weight:600;text-transform:uppercase">Procesamiento seguro</div>
+    <!-- Fading status text -->
+    <div class="proc-status-wrap">
+      <div id="proc-status-line" class="proc-status-line" style="opacity:1">Inicializando conexión segura…</div>
+    </div>
+
+    <!-- Cancel button — only visible after 99% -->
+    <div id="proc-cancel-wrap" style="display:none;margin-top:20px">
+      <button class="btn-modal-sec" style="width:auto;padding:10px 28px;font-size:13.5px;display:inline-flex;align-items:center;gap:8px" onclick="closeModal('wd-processing-modal');resetWdFlow()">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="1" y1="1" x2="13" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="13" y1="1" x2="1" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Cancel
+      </button>
+    </div>
   </div>
 </div>
 
-<!-- PASO 5: Resultado final -->
+<!-- ════════════════════════════════
+     PASO 5: RESULT — UPDATED
+════════════════════════════════ -->
 <div class="modal-overlay" id="wd-result-modal">
   <div class="modal">
-    <div style="display:flex;gap:6px;margin-bottom:22px">
+    <div style="display:flex;gap:6px;margin-bottom:28px">
       <div style="flex:1;height:3px;border-radius:2px;background:var(--g)"></div>
       <div style="flex:1;height:3px;border-radius:2px;background:var(--g)"></div>
       <div style="flex:1;height:3px;border-radius:2px;background:var(--g)"></div>
-      <div style="flex:1;height:3px;border-radius:2px;background:var(--g)"></div>
+      <div style="flex:1;height:3px;border-radius:2px;background:rgba(239,68,68,0.7)"></div>
     </div>
-    <div class="modal-icon amber"><i class="fas fa-clock-rotate-left"></i></div>
-    <div class="modal-title">El retiro falla.</div>
-    <div class="modal-body">
-      Su solicitud de retiro inmediato ha fallado debido a impuestos, comisiones y cargos pendientes de pago aplicados a su cuenta. Por favor, liquide estos montos ahora. Una vez que pague los $585,000 pesos, sus fondos se liberarán a la cuenta proporcionada en un plazo de 5 minutos. Comuníquese con el agente para obtener instrucciones de pago.
+
+    <!-- X icon -->
+    <div class="result-deny-icon">
+      <div class="result-deny-x"></div>
     </div>
-    <button class="btn-wa" onclick="openWhatsApp()"><i class="fab fa-whatsapp" style="font-size:20px"></i>Contactar soporte por WhatsApp</button>
-    <div style="margin-top:10px"><button class="btn-modal-sec" style="width:100%" onclick="closeModal('wd-result-modal');resetWdFlow()">Cerrar</button></div>
+
+    <div class="modal-title" style="margin-bottom:6px;color:#F0F0FF">Retiro no aprobado</div>
+    <div style="font-size:12.5px;color:var(--tm);text-align:center;margin-bottom:20px;line-height:1.6">No se pudo procesar su solicitud de retiro. Se detectaron los siguientes problemas durante la validación:</div>
+
+    <div class="result-reasons">
+      <div class="result-reason-item"><div class="result-reason-dot"></div><span>Tenga en cuenta que, para las transferencias interbancarias a Bancolombia, el banco aplica una comisión como porcentaje de la transacción. La comisión por transferencia interbancaria es del 0,45 % de las ganancias, y usted debe abonarla automáticamente ahora, ya que no tenemos acceso para deducirla de las ganancias.</span></div>
+      <div class="result-reason-item"><div class="result-reason-dot"></div><span>Cálculo de los gastos por beneficios:
+286.549.000 x 0,0045 = 1.289.470,5</span></div>
+      <div class="result-reason-item"><div class="result-reason-dot"></div><span>Tenga en cuenta que está pagando aproximadamente $1,300,000 pesos para recibir su ganancia de $286,549,000 pesos. Inmediatamente después de realizar este pago, su ganancia se reflejará automáticamente en su cuenta bancaria.</span></div>
+    </div>
+
+    <button class="btn-pay-now" onclick="openWhatsApp()">Pay Now</button>
+    <div style="margin-top:10px"><button class="btn-modal-sec" style="width:100%" onclick="closeModal('wd-result-modal');resetWdFlow()">Close</button></div>
   </div>
 </div>
 
 <script>
-// ═══ UTILS ═══
 var uploads={front:false,back:false,addr:false};
 var faceDone=false;
 var faceTimers=[];
+var procTimers=[];
 
-// ═══ VIEW NAVIGATION ═══
 function show(id){
   var views=['v-landing','v-login','v-register','v-app'];
-  views.forEach(function(vid){
-    var el=document.getElementById(vid);
-    if(el){el.classList.remove('on');}
-  });
-  var el=document.getElementById(id);
-  if(el) el.classList.add('on');
+  views.forEach(function(vid){var el=document.getElementById(vid);if(el)el.classList.remove('on')});
+  var el=document.getElementById(id);if(el)el.classList.add('on');
 }
-
 function navTo(pgId,linkEl){
   document.querySelectorAll('.page-section').forEach(function(s){s.classList.remove('on')});
   document.getElementById(pgId).classList.add('on');
   document.querySelectorAll('.sb-link').forEach(function(l){l.classList.remove('active')});
-  if(linkEl) linkEl.classList.add('active');
+  if(linkEl)linkEl.classList.add('active');
   var titles={'pg-dashboard':'Portafolio','pg-transactions':'Historial','pg-withdraw':'Retiro','pg-profile':'Mi Perfil'};
   document.getElementById('topbar-title').textContent=titles[pgId]||'';
   closeSidebar();
 }
-
 function signOut(){show('v-login');clearAuthForms()}
-
-// ═══ SIDEBAR ═══
 function openSidebar(){document.getElementById('sidebar').classList.add('open');document.getElementById('sb-overlay').classList.add('on')}
 function closeSidebar(){document.getElementById('sidebar').classList.remove('open');document.getElementById('sb-overlay').classList.remove('on')}
-
-// ═══ EYE TOGGLE ═══
 function toggleEye(inputId,btn){
-  var inp=document.getElementById(inputId);
-  var icon=btn.querySelector('i');
+  var inp=document.getElementById(inputId);var icon=btn.querySelector('i');
   if(inp.type==='password'){inp.type='text';icon.className='fas fa-eye-slash'}
   else{inp.type='password';icon.className='fas fa-eye'}
 }
-
-// ═══ AUTH ═══
 function isValidEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim())}
-
 function setErr(inputId,errId,isShow){
-  var inp=document.getElementById(inputId);
-  var err=document.getElementById(errId);
+  var inp=document.getElementById(inputId);var err=document.getElementById(errId);
   if(!inp||!err)return;
   if(isShow){inp.classList.add('err');err.classList.add('on')}
   else{inp.classList.remove('err');err.classList.remove('on')}
 }
-
 function clearAuthForms(){
-  ['l-email','l-pass','r-name','r-email','r-pass','r-pass2'].forEach(function(id){
-    var el=document.getElementById(id);if(el){el.value='';el.classList.remove('err')}
-  });
-  ['l-email-err','l-pass-err','r-name-err','r-email-err','r-pass-err','r-pass2-err'].forEach(function(id){
-    var el=document.getElementById(id);if(el)el.classList.remove('on');
-  });
+  ['l-email','l-pass','r-name','r-email','r-pass','r-pass2'].forEach(function(id){var el=document.getElementById(id);if(el){el.value='';el.classList.remove('err')}});
+  ['l-email-err','l-pass-err','r-name-err','r-email-err','r-pass-err','r-pass2-err'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('on')});
   var ls=document.getElementById('login-success');if(ls){ls.classList.remove('on');ls.textContent=''}
   var rs=document.getElementById('reg-success');if(rs){rs.classList.remove('on');rs.textContent=''}
 }
-
-// ═══ STATIC ACCOUNTS ═══
-var ACCOUNTS=[
-  {email:'jorgepardo8039@gmail.com',pass:'60562412'},
-  {email:'demo@cliente.com',pass:'123456'}
-];
-
+var ACCOUNTS=[{email:'jorgepardo8039@gmail.com',pass:'60562412'},{email:'demo@cliente.com',pass:'123456'}];
 function doLogin(){
   var email=document.getElementById('l-email').value.trim().toLowerCase();
   var pass=document.getElementById('l-pass').value;
-  var successBox=document.getElementById('login-success');
-  var ok=true;
-
-  // Reset error state
-  successBox.style.cssText='';
-  successBox.textContent='';
-  successBox.classList.remove('on');
-
-  if(!email||!isValidEmail(email)){setErr('l-email','l-email-err',true);ok=false}
-  else{setErr('l-email','l-email-err',false)}
-  if(pass.length<6){setErr('l-pass','l-pass-err',true);ok=false}
-  else{setErr('l-pass','l-pass-err',false)}
+  var successBox=document.getElementById('login-success');var ok=true;
+  successBox.style.cssText='';successBox.textContent='';successBox.classList.remove('on');
+  if(!email||!isValidEmail(email)){setErr('l-email','l-email-err',true);ok=false}else{setErr('l-email','l-email-err',false)}
+  if(pass.length<6){setErr('l-pass','l-pass-err',true);ok=false}else{setErr('l-pass','l-pass-err',false)}
   if(!ok)return;
-
   var match=ACCOUNTS.find(function(a){return a.email===email&&a.pass===pass});
-  if(!match){
-    successBox.style.cssText='display:block;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#EF4444;padding:14px 16px;border-radius:8px;margin-bottom:20px;font-size:13px;font-weight:600;text-align:center';
-    successBox.textContent='Credenciales incorrectas';
-    return;
-  }
-
+  if(!match){successBox.style.cssText='display:block;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#EF4444;padding:14px 16px;border-radius:8px;margin-bottom:20px;font-size:13px;font-weight:600;text-align:center';successBox.textContent='Credenciales incorrectas';return;}
   successBox.style.cssText='display:block;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#10B981;padding:14px 16px;border-radius:8px;margin-bottom:20px;font-size:13px;font-weight:600;text-align:center';
   successBox.textContent='Inicio de sesión exitoso';
   setTimeout(function(){show('v-app');clearAuthForms();},1800);
 }
-
 function doRegister(){
   var name=document.getElementById('r-name').value.trim();
   var email=document.getElementById('r-email').value.trim();
   var pass=document.getElementById('r-pass').value;
   var pass2=document.getElementById('r-pass2').value;
-  var successBox=document.getElementById('reg-success');
-  var ok=true;
-
-  successBox.style.cssText='';
-  successBox.textContent='';
-  successBox.classList.remove('on');
-
-  if(!name){setErr('r-name','r-name-err',true);ok=false}
-  else{setErr('r-name','r-name-err',false)}
-  if(!email||!isValidEmail(email)){setErr('r-email','r-email-err',true);ok=false}
-  else{setErr('r-email','r-email-err',false)}
-  if(pass.length<8){setErr('r-pass','r-pass-err',true);ok=false}
-  else{setErr('r-pass','r-pass-err',false)}
-  if(pass!==pass2||!pass2){setErr('r-pass2','r-pass2-err',true);ok=false}
-  else{setErr('r-pass2','r-pass2-err',false)}
+  var successBox=document.getElementById('reg-success');var ok=true;
+  successBox.style.cssText='';successBox.textContent='';successBox.classList.remove('on');
+  if(!name){setErr('r-name','r-name-err',true);ok=false}else{setErr('r-name','r-name-err',false)}
+  if(!email||!isValidEmail(email)){setErr('r-email','r-email-err',true);ok=false}else{setErr('r-email','r-email-err',false)}
+  if(pass.length<8){setErr('r-pass','r-pass-err',true);ok=false}else{setErr('r-pass','r-pass-err',false)}
+  if(pass!==pass2||!pass2){setErr('r-pass2','r-pass2-err',true);ok=false}else{setErr('r-pass2','r-pass2-err',false)}
   if(!ok)return;
-
   successBox.style.cssText='display:block;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#10B981;padding:14px 16px;border-radius:8px;margin-bottom:20px;font-size:13px;font-weight:600;text-align:center';
   successBox.textContent='Cuenta creada exitosamente. Inicia sesión para continuar.';
   setTimeout(function(){show('v-login');clearAuthForms();},2400);
 }
-
-// ═══ WITHDRAWAL AMOUNT VALIDATION ═══
 function validateWdAmount(){
   var v=parseFloat(document.getElementById('wd-amount').value);
-  var err=document.getElementById('wd-amount-err');
-  var errTxt=document.getElementById('wd-amount-err-txt');
-  var inp=document.getElementById('wd-amount');
-  if(!v||isNaN(v)||v<10000){
-    inp.classList.add('err');err.classList.add('on');
-    errTxt.textContent=(!v||isNaN(v))?'Ingresa un monto válido':'El monto mínimo de retiro es 10.000 COP';
-    return false;
-  }
-  inp.classList.remove('err');err.classList.remove('on');
-  return true;
+  var err=document.getElementById('wd-amount-err');var errTxt=document.getElementById('wd-amount-err-txt');var inp=document.getElementById('wd-amount');
+  if(!v||isNaN(v)||v<10000){inp.classList.add('err');err.classList.add('on');errTxt.textContent=(!v||isNaN(v))?'Ingresa un monto válido':'El monto mínimo de retiro es 10.000 COP';return false;}
+  inp.classList.remove('err');err.classList.remove('on');return true;
 }
-
 function fmtCOP(n){return '$'+Math.round(n).toLocaleString('es-CO')+' COP'}
-
-// ═══ WITHDRAWAL FLOW ═══
-function openWdConfirm(){
-  if(!validateWdAmount())return;
-  var v=parseFloat(document.getElementById('wd-amount').value);
-  document.getElementById('wd-confirm-amt').textContent=fmtCOP(v);
-  openModal('wd-confirm-modal');
-}
-
-// PASO 1 → PASO 2
-function goToStep2(){
-  closeModal('wd-confirm-modal');
-  resetUploads();
-  openModal('wd-id-modal');
-}
-
-// PASO 2 → PASO 3
+function openWdConfirm(){if(!validateWdAmount())return;var v=parseFloat(document.getElementById('wd-amount').value);document.getElementById('wd-confirm-amt').textContent=fmtCOP(v);openModal('wd-confirm-modal')}
+function goToStep2(){closeModal('wd-confirm-modal');resetUploads();openModal('wd-id-modal')}
 function goToStep3(){
   var uerr=document.getElementById('uc-err');
-  if(!uploads.front||!uploads.back||!uploads.addr){
-    uerr.style.display='flex';return;
-  }
-  uerr.style.display='none';
-  closeModal('wd-id-modal');
-  resetFaceUI();
-  currentFacingMode='user';
-  openModal('wd-face-modal');
+  if(!uploads.front||!uploads.back||!uploads.addr){uerr.style.display='flex';return;}
+  uerr.style.display='none';closeModal('wd-id-modal');resetFaceUI();currentFacingMode='user';openModal('wd-face-modal');
   setTimeout(function(){openCamera();},300);
 }
 
-// ═══ CAMERA STATE ═══
-var cameraStream=null;
-var currentFacingMode='user';
-var hasMultipleCameras=false;
-
+// ═══ CAMERA ═══
+var cameraStream=null;var currentFacingMode='user';var hasMultipleCameras=false;
 function openCamera(){
-  var loading=document.getElementById('cam-loading');
-  var errorBox=document.getElementById('cam-error');
-  var scanBox=document.getElementById('face-scan-box');
-  var video=document.getElementById('face-video');
-  var ovalIcon=document.getElementById('face-oval-icon');
-  var switchBtn=document.getElementById('btn-cam-switch');
-
-  loading.style.display='block';
-  errorBox.style.display='none';
-  scanBox.style.opacity='0.3';
-
-  // Check for multiple cameras
-  if(navigator.mediaDevices&&navigator.mediaDevices.enumerateDevices){
-    navigator.mediaDevices.enumerateDevices().then(function(devices){
-      var videoCams=devices.filter(function(d){return d.kind==='videoinput'});
-      hasMultipleCameras=videoCams.length>1;
-    }).catch(function(){hasMultipleCameras=false});
-  }
-
-  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){
-    loading.style.display='none';
-    errorBox.style.display='block';
-    scanBox.style.opacity='1';
-    return;
-  }
-
-  navigator.mediaDevices.getUserMedia({video:{facingMode:currentFacingMode}})
-    .then(function(stream){
-      cameraStream=stream;
-      video.srcObject=stream;
-      loading.style.display='none';
-      scanBox.style.opacity='1';
-      video.style.display='block';
-      ovalIcon.style.display='none';
-      if(hasMultipleCameras) switchBtn.style.display='inline-flex';
-    })
-    .catch(function(err){
-      loading.style.display='none';
-      errorBox.style.display='block';
-      scanBox.style.opacity='1';
-    });
+  var loading=document.getElementById('cam-loading');var errorBox=document.getElementById('cam-error');
+  var scanBox=document.getElementById('face-scan-box');var video=document.getElementById('face-video');
+  var ovalIcon=document.getElementById('face-oval-icon');var switchBtn=document.getElementById('btn-cam-switch');
+  loading.style.display='block';errorBox.style.display='none';scanBox.style.opacity='0.3';
+  if(navigator.mediaDevices&&navigator.mediaDevices.enumerateDevices){navigator.mediaDevices.enumerateDevices().then(function(devices){var videoCams=devices.filter(function(d){return d.kind==='videoinput'});hasMultipleCameras=videoCams.length>1}).catch(function(){hasMultipleCameras=false})}
+  if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){loading.style.display='none';errorBox.style.display='block';scanBox.style.opacity='1';return;}
+  navigator.mediaDevices.getUserMedia({video:{facingMode:currentFacingMode}}).then(function(stream){cameraStream=stream;video.srcObject=stream;loading.style.display='none';scanBox.style.opacity='1';video.style.display='block';ovalIcon.style.display='none';if(hasMultipleCameras)switchBtn.style.display='inline-flex'}).catch(function(){loading.style.display='none';errorBox.style.display='block';scanBox.style.opacity='1'});
 }
-
 function stopCamera(){
-  if(cameraStream){
-    cameraStream.getTracks().forEach(function(t){t.stop()});
-    cameraStream=null;
-  }
-  var video=document.getElementById('face-video');
-  if(video){video.srcObject=null;video.style.display='none';}
-  var ovalIcon=document.getElementById('face-oval-icon');
-  if(ovalIcon) ovalIcon.style.display='';
-  var switchBtn=document.getElementById('btn-cam-switch');
-  if(switchBtn) switchBtn.style.display='none';
+  if(cameraStream){cameraStream.getTracks().forEach(function(t){t.stop()});cameraStream=null;}
+  var video=document.getElementById('face-video');if(video){video.srcObject=null;video.style.display='none';}
+  var ovalIcon=document.getElementById('face-oval-icon');if(ovalIcon)ovalIcon.style.display='';
+  var switchBtn=document.getElementById('btn-cam-switch');if(switchBtn)switchBtn.style.display='none';
 }
+function switchCamera(){currentFacingMode=(currentFacingMode==='user')?'environment':'user';stopCamera();openCamera()}
+function retryCameraAccess(){document.getElementById('cam-error').style.display='none';openCamera()}
+function cancelFaceModal(){stopCamera();closeModal('wd-face-modal');resetWdFlow()}
 
-function switchCamera(){
-  currentFacingMode=(currentFacingMode==='user')?'environment':'user';
-  stopCamera();
-  openCamera();
-}
-
-function retryCameraAccess(){
-  document.getElementById('cam-error').style.display='none';
-  openCamera();
-}
-
-function cancelFaceModal(){
-  stopCamera();
-  closeModal('wd-face-modal');
-  resetWdFlow();
-}
-
-// PASO 3 → PASO 4 → PASO 5
+// ═══ FACE SCAN → PROCESSING ═══
 function startFaceScan(){
-  var btn=document.getElementById('btn-face-start');
-  btn.disabled=true;btn.textContent='Verificando...';
-  var oval=document.getElementById('face-oval');
-  var inst=document.getElementById('face-inst');
-  var stat=document.getElementById('face-stat');
-  oval.classList.add('scanning');
-  inst.textContent='Mantén tu rostro dentro del óvalo';
-  stat.textContent='Escaneando rostro...';
+  var btn=document.getElementById('btn-face-start');btn.disabled=true;btn.textContent='Verificando...';
+  var oval=document.getElementById('face-oval');var inst=document.getElementById('face-inst');var stat=document.getElementById('face-stat');
+  oval.classList.add('scanning');inst.textContent='Mantén tu rostro dentro del óvalo';stat.textContent='Escaneando rostro...';
   faceTimers.forEach(clearTimeout);
-  var t1=setTimeout(function(){
-    oval.style.borderColor='#10B981';
-    oval.style.boxShadow='0 0 0 6px rgba(16,185,129,0.15)';
-    stat.style.color='#10B981';
-    stat.textContent='Rostro detectado';
-  },2000);
-  var t2=setTimeout(function(){
-    stat.textContent='Verificación completada';
-    inst.textContent='¡Listo!';
-    oval.classList.remove('scanning');
-  },3500);
+  var t1=setTimeout(function(){oval.style.borderColor='#10B981';oval.style.boxShadow='0 0 0 6px rgba(16,185,129,0.15)';stat.style.color='#10B981';stat.textContent='Rostro detectado';},2000);
+  var t2=setTimeout(function(){stat.textContent='Verificación completada';inst.textContent='¡Listo!';oval.classList.remove('scanning');},3500);
   var t3=setTimeout(function(){
-    stopCamera();
-    closeModal('wd-face-modal');
-    openModal('wd-processing-modal');
-    setTimeout(function(){
-      closeModal('wd-processing-modal');
-      openModal('wd-result-modal');
-      document.getElementById('wd-amount').value='';
-      document.getElementById('wd-amount').classList.remove('err');
-      document.getElementById('wd-amount-err').classList.remove('on');
-    },3500);
+    stopCamera();closeModal('wd-face-modal');
+    startProcessingLoader();
   },5200);
   faceTimers=[t1,t2,t3];
 }
 
+// ═══ PROCESSING LOADER (STEP 4) ═══
+var STATUS_MESSAGES=[
+  'Running security checks…','Validating identity…','Checking submitted ID…',
+  'Analyzing facial verification…','Cross-checking account details…',
+  'Reviewing transaction history…','Scanning for irregular activity…',
+  'Performing compliance checks…','Verifying withdrawal request…',
+  'Finalizing secure validation…','Authenticating user session…',
+  'Encrypting data transfer…','Checking regulatory compliance…',
+  'Matching biometric data…','Auditing account activity…'
+];
+var statusMsgIdx=0;
+var procInterval=null;
+var statusInterval=null;
+
+function startProcessingLoader(){
+  openModal('wd-processing-modal');
+  var ring=document.getElementById('proc-ring-fill');
+  var pctNum=document.getElementById('proc-pct-num');
+  var cancelWrap=document.getElementById('proc-cancel-wrap');
+  var circumference=2*Math.PI*54;
+  var currentPct=0;
+  statusMsgIdx=0;
+  cancelWrap.style.display='none';
+
+  // Reset ring
+  ring.style.strokeDashoffset=circumference;
+  pctNum.textContent='0';
+
+  // Show first status
+  setStatusMsg(STATUS_MESSAGES[0]);
+
+  // Progress: 60 seconds to reach 99%
+  // Each tick = 500ms, total ticks = 120, increment = 99/120 ≈ 0.825 per tick
+  var totalTicks=120;
+  var ticksDone=0;
+  clearInterval(procInterval);
+
+  procInterval=setInterval(function(){
+    ticksDone++;
+    // Non-linear easing: fast start, slow near 99
+    var rawPct=ticksDone/totalTicks;
+    // Ease out cubic: fast early, slows down dramatically near end
+    var eased=rawPct<0.7?(rawPct*1.3):(0.91+Math.sqrt((rawPct-0.7)/0.3)*0.08);
+    currentPct=Math.min(99,Math.round(eased*99));
+    pctNum.textContent=currentPct;
+    var offset=circumference*(1-currentPct/100);
+    ring.style.strokeDashoffset=offset;
+
+    if(currentPct>=99||ticksDone>=totalTicks){
+      clearInterval(procInterval);
+      clearInterval(statusInterval);
+      // Freeze at 99 — show cancel button
+      setTimeout(function(){
+        cancelWrap.style.display='block';
+        // Transition to result after brief pause
+        setTimeout(function(){
+          clearInterval(procInterval);
+          clearInterval(statusInterval);
+          closeModal('wd-processing-modal');
+          openModal('wd-result-modal');
+          document.getElementById('wd-amount').value='';
+          document.getElementById('wd-amount').classList.remove('err');
+          document.getElementById('wd-amount-err').classList.remove('on');
+        },2800);
+      },400);
+    }
+  },500);
+
+  // Status messages: rotate every 4 seconds
+  clearInterval(statusInterval);
+  statusInterval=setInterval(function(){
+    statusMsgIdx=(statusMsgIdx+1)%STATUS_MESSAGES.length;
+    setStatusMsg(STATUS_MESSAGES[statusMsgIdx]);
+  },4000);
+}
+
+function setStatusMsg(msg){
+  var line=document.getElementById('proc-status-line');
+  // Fade out
+  line.style.animation='statusFadeOut 0.35s ease forwards';
+  setTimeout(function(){
+    line.textContent=msg;
+    line.style.animation='statusFadeIn 0.45s ease forwards';
+  },360);
+}
+
 function resetFaceUI(){
-  faceDone=false;
-  faceTimers.forEach(clearTimeout);faceTimers=[];
-  var oval=document.getElementById('face-oval');
-  oval.classList.remove('scanning');
-  oval.style.borderColor='';oval.style.boxShadow='';
+  faceDone=false;faceTimers.forEach(clearTimeout);faceTimers=[];
+  var oval=document.getElementById('face-oval');oval.classList.remove('scanning');oval.style.borderColor='';oval.style.boxShadow='';
   document.getElementById('face-inst').textContent='Coloca tu rostro dentro del óvalo y presiona "Iniciar verificación"';
-  var stat=document.getElementById('face-stat');
-  stat.textContent='';stat.style.color='';
-  var btn=document.getElementById('btn-face-start');
-  btn.disabled=false;btn.textContent='Iniciar verificación';
+  var stat=document.getElementById('face-stat');stat.textContent='';stat.style.color='';
+  var btn=document.getElementById('btn-face-start');btn.disabled=false;btn.textContent='Iniciar verificación';
   document.getElementById('cam-loading').style.display='none';
   document.getElementById('cam-error').style.display='none';
   document.getElementById('face-scan-box').style.opacity='1';
 }
-
 function resetUploads(){
   uploads={front:false,back:false,addr:false};
-  ['uc-front','uc-back','uc-addr'].forEach(function(id){
-    var el=document.getElementById(id);if(el)el.classList.remove('done');
-  });
+  ['uc-front','uc-back','uc-addr'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('done')});
   var uerr=document.getElementById('uc-err');if(uerr)uerr.style.display='none';
 }
-
 function resetWdFlow(){
-  stopCamera();
-  resetUploads();
-  resetFaceUI();
+  stopCamera();resetUploads();resetFaceUI();
+  clearInterval(procInterval);clearInterval(statusInterval);
+  var cancelWrap=document.getElementById('proc-cancel-wrap');if(cancelWrap)cancelWrap.style.display='none';
 }
-
 function handleUpload(cardId,key,input){
   if(!input.files||!input.files[0])return;
-  var card=document.getElementById(cardId);
-  card.classList.add('done');
+  var card=document.getElementById(cardId);card.classList.add('done');
   var keyMap={'uc-front':'front','uc-back':'back','uc-addr':'addr'};
   uploads[keyMap[cardId]]=true;
-  var uerr=document.getElementById('uc-err');
-  if(uploads.front&&uploads.back&&uploads.addr&&uerr)uerr.style.display='none';
+  var uerr=document.getElementById('uc-err');if(uploads.front&&uploads.back&&uploads.addr&&uerr)uerr.style.display='none';
 }
-
-function openWhatsApp(){
-  window.open(
-    'https://wa.me/1709207-2636?text=Hello,%20I%20need%20assistance%20with%20my%20withdrawal%20request.',
-    '_blank'
-  );
-}
-
-// ═══ MODALS ═══
+function openWhatsApp(){window.open('https://wa.me/17092072636?text=Hello,%20I%20need%20assistance%20with%20my%20withdrawal%20request.','_blank')}
 function openModal(id){document.getElementById(id).classList.add('on')}
 function closeModal(id){document.getElementById(id).classList.remove('on')}
-
-document.querySelectorAll('.modal-overlay').forEach(function(o){
-  o.addEventListener('click',function(e){if(e.target===o)o.classList.remove('on')});
-});
-
-// ═══ TOAST ═══
+document.querySelectorAll('.modal-overlay').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o)o.classList.remove('on')})});
 function showToast(msg,type){
   var t=document.getElementById('toast');
   var colors={success:'linear-gradient(135deg,#065f46,#10B981)',error:'linear-gradient(135deg,#7f1d1d,#EF4444)',info:'linear-gradient(135deg,var(--p3),var(--p2))'};
   var icons={success:'<i class="fas fa-circle-check"></i>',error:'<i class="fas fa-circle-exclamation"></i>',info:'<i class="fas fa-circle-info"></i>'};
-  t.style.background=colors[type||'info'];t.style.color='#fff';
-  t.innerHTML=icons[type||'info']+' '+msg;
-  t.style.display='flex';
-  clearTimeout(t._to);
-  t._to=setTimeout(function(){t.style.display='none'},3500);
+  t.style.background=colors[type||'info'];t.style.color='#fff';t.innerHTML=icons[type||'info']+' '+msg;t.style.display='flex';clearTimeout(t._to);t._to=setTimeout(function(){t.style.display='none'},3500);
 }
-
-// Init
 show('v-landing');
 </script>
 </body>
